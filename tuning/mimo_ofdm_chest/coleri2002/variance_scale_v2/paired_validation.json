@@ -1,0 +1,24 @@
+{
+  "protocol_version": 2,
+  "metric": "mean_codeword_bler",
+  "method_weighting": "equal over all four Coleri methods",
+  "ebno_dbs": [
+    10.0
+  ],
+  "seed": 161803,
+  "num_mc_batches_per_snr": 63,
+  "batch_size": 4,
+  "raw_winner": {
+    "err_var_scale": 0.4540521216492649
+  },
+  "candidates": {
+    "current": 0.868,
+    "rounded_winner": 0.454
+  },
+  "objectives": {
+    "current": 0.055803571428571425,
+    "rounded_winner": 0.057953042328042326
+  },
+  "selected": "current",
+  "selected_scale": 0.868
+}

@@ -1,0 +1,56 @@
+{
+  "protocol_version": 2,
+  "metric": "weighted_nmse",
+  "ebno_dbs": [
+    -10.0,
+    -5.0,
+    0.0,
+    5.0,
+    10.0
+  ],
+  "snr_weights": [
+    0.1,
+    0.31622776601683794,
+    1.0,
+    3.1622776601683795,
+    10.0
+  ],
+  "seed": 314159,
+  "num_mc_batches_per_snr": 63,
+  "batch_size": 4,
+  "raw_winner": {
+    "admm_num_iters": 18,
+    "admm_rho": 0.07996883844767257,
+    "diffuse_energy": 0.8068198785784523,
+    "diffuse_num_taps": 3,
+    "tau_noise_scale": 6.548484063707546
+  },
+  "candidates": {
+    "current": {
+      "diffuse_num_taps": 3,
+      "tau_noise_scale": 1.0,
+      "diffuse_energy": 8.0,
+      "admm_rho": 0.1,
+      "admm_num_iters": 10
+    },
+    "rounded_winner": {
+      "diffuse_num_taps": 3,
+      "tau_noise_scale": 6.55,
+      "diffuse_energy": 0.807,
+      "admm_rho": 0.08,
+      "admm_num_iters": 18
+    }
+  },
+  "objectives": {
+    "current": 0.008578770809301955,
+    "rounded_winner": 0.006113508472647749
+  },
+  "selected": "rounded_winner",
+  "selected_parameters": {
+    "diffuse_num_taps": 3,
+    "tau_noise_scale": 6.55,
+    "diffuse_energy": 0.807,
+    "admm_rho": 0.08,
+    "admm_num_iters": 18
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "protocol_version": 2,
+  "metric": "weighted_nmse",
+  "ebno_dbs": [
+    -10.0,
+    -5.0,
+    0.0,
+    5.0,
+    10.0
+  ],
+  "snr_weights": [
+    0.1,
+    0.31622776601683794,
+    1.0,
+    3.1622776601683795,
+    10.0
+  ],
+  "seed": 314159,
+  "num_mc_batches_per_snr": 63,
+  "batch_size": 4,
+  "raw_winner": {
+    "free_bits": 0.8754568417951749,
+    "latent_dim": 16,
+    "learning_rate": 0.0002304631701668831,
+    "optimizer_batch_size": 512
+  },
+  "candidates": {
+    "current": {
+      "latent_dim": 8,
+      "learning_rate": 0.0001,
+      "free_bits": 0.0,
+      "optimizer_batch_size": 4096
+    },
+    "rounded_winner": {
+      "latent_dim": 16,
+      "learning_rate": 0.00023,
+      "free_bits": 0.875,
+      "optimizer_batch_size": 512
+    }
+  },
+  "objectives": {
+    "current": 0.0045868521390932965,
+    "rounded_winner": 0.004436696382062916
+  },
+  "model_manifests": {
+    "current": [
+      "/home/gmarti/chest2sionna-v2-runs/tuning/baur2022-v2-calibrated/trial-assets/3gpp-umi/baur2022/vae-noisy/n32-z8-tb400-bs16-vb16-vbs16-ep200-mb4096-lr0p0001-fb0-mins0-pat20-rmd0p0001-cf1e-05-covfull-trsnrm10-seed42/manifest.json",
+      "/home/gmarti/chest2sionna-v2-runs/tuning/baur2022-v2-calibrated/trial-assets/3gpp-umi/baur2022/vae-noisy/n32-z8-tb400-bs16-vb16-vbs16-ep200-mb4096-lr0p0001-fb0-mins0-pat20-rmd0p0001-cf1e-05-covfull-trsnrm5-seed42/manifest.json",
+      "/home/gmarti/chest2sionna-v2-runs/tuning/baur2022-v2-calibrated/trial-assets/3gpp-umi/baur2022/vae-noisy/n32-z8-tb400-bs16-vb16-vbs16-ep200-mb4096-lr0p0001-fb0-mins0-pat20-rmd0p0001-cf1e-05-covfull-trsnr0-seed42/manifest.json",
+      "/home/gmarti/chest2sionna-v2-runs/tuning/baur2022-v2-calibrated/trial-assets/3gpp-umi/baur2022/vae-noisy/n32-z8-tb400-bs16-vb16-vbs16-ep200-mb4096-lr0p0001-fb0-mins0-pat20-rmd0p0001-cf1e-05-covfull-trsnr5-seed42/manifest.json",
+      "/home/gmarti/chest2sionna-v2-runs/tuning/baur2022-v2-calibrated/trial-assets/3gpp-umi/baur2022/vae-noisy/n32-z8-tb400-bs16-vb16-vbs16-ep200-mb4096-lr0p0001-fb0-mins0-pat20-rmd0p0001-cf1e-05-covfull-trsnr10-seed42/manifest.json"
+    ],
+    "rounded_winner": [
+      "/home/gmarti/chest2sionna-v2-runs/tuning/baur2022-v2-calibrated/trial-assets/3gpp-umi/baur2022/vae-noisy/n32-z16-tb400-bs16-vb16-vbs16-ep200-mb512-lr0p00023-fb0p875-mins0-pat20-rmd0p0001-cf1e-05-covfull-trsnrm10-seed42/manifest.json",
+      "/home/gmarti/chest2sionna-v2-runs/tuning/baur2022-v2-calibrated/trial-assets/3gpp-umi/baur2022/vae-noisy/n32-z16-tb400-bs16-vb16-vbs16-ep200-mb512-lr0p00023-fb0p875-mins0-pat20-rmd0p0001-cf1e-05-covfull-trsnrm5-seed42/manifest.json",
+      "/home/gmarti/chest2sionna-v2-runs/tuning/baur2022-v2-calibrated/trial-assets/3gpp-umi/baur2022/vae-noisy/n32-z16-tb400-bs16-vb16-vbs16-ep200-mb512-lr0p00023-fb0p875-mins0-pat20-rmd0p0001-cf1e-05-covfull-trsnr0-seed42/manifest.json",
+      "/home/gmarti/chest2sionna-v2-runs/tuning/baur2022-v2-calibrated/trial-assets/3gpp-umi/baur2022/vae-noisy/n32-z16-tb400-bs16-vb16-vbs16-ep200-mb512-lr0p00023-fb0p875-mins0-pat20-rmd0p0001-cf1e-05-covfull-trsnr5-seed42/manifest.json",
+      "/home/gmarti/chest2sionna-v2-runs/tuning/baur2022-v2-calibrated/trial-assets/3gpp-umi/baur2022/vae-noisy/n32-z16-tb400-bs16-vb16-vbs16-ep200-mb512-lr0p00023-fb0p875-mins0-pat20-rmd0p0001-cf1e-05-covfull-trsnr10-seed42/manifest.json"
+    ]
+  },
+  "selected": "rounded_winner",
+  "selected_parameters": {
+    "latent_dim": 16,
+    "learning_rate": 0.00023,
+    "free_bits": 0.875,
+    "optimizer_batch_size": 512
+  }
+}

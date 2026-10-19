@@ -1,0 +1,1455 @@
+{
+  "batch_elements_per_snr": 12,
+  "batch_elements_per_trial": 60,
+  "batch_size_per_snr": 4,
+  "best_estimator_kwargs": {
+    "block_len": 78,
+    "err_var_scale": 0.3405776426701012,
+    "model_noise_variances": {
+      "device": "cpu",
+      "dtype": "torch.float32",
+      "shape": [
+        5
+      ],
+      "type": "torch.Tensor"
+    },
+    "model_states": [
+      {
+        "net.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            1024
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            1024,
+            78
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.10.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.10.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64,
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.12.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.12.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64,
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.14.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            78
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.14.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            78,
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            512
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            512,
+            1024
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.4.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            256
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.4.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            256,
+            512
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.6.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.6.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128,
+            256
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.8.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.8.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64,
+            128
+          ],
+          "type": "torch.Tensor"
+        }
+      },
+      {
+        "net.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            1024
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            1024,
+            78
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.10.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.10.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64,
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.12.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.12.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64,
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.14.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            78
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.14.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            78,
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            512
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            512,
+            1024
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.4.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            256
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.4.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            256,
+            512
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.6.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.6.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128,
+            256
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.8.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.8.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64,
+            128
+          ],
+          "type": "torch.Tensor"
+        }
+      },
+      {
+        "net.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            1024
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            1024,
+            78
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.10.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.10.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64,
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.12.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.12.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64,
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.14.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            78
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.14.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            78,
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            512
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            512,
+            1024
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.4.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            256
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.4.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            256,
+            512
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.6.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.6.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128,
+            256
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.8.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.8.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64,
+            128
+          ],
+          "type": "torch.Tensor"
+        }
+      },
+      {
+        "net.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            1024
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            1024,
+            78
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.10.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.10.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64,
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.12.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.12.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64,
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.14.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            78
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.14.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            78,
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            512
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            512,
+            1024
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.4.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            256
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.4.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            256,
+            512
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.6.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.6.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128,
+            256
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.8.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.8.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64,
+            128
+          ],
+          "type": "torch.Tensor"
+        }
+      },
+      {
+        "net.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            1024
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            1024,
+            78
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.10.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.10.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64,
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.12.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.12.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64,
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.14.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            78
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.14.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            78,
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            512
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            512,
+            1024
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.4.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            256
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.4.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            256,
+            512
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.6.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.6.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128,
+            256
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.8.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "net.8.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64,
+            128
+          ],
+          "type": "torch.Tensor"
+        }
+      }
+    ]
+  },
+  "best_estimator_kwargs_variants": [
+    {
+      "block_len": 78,
+      "err_var_scale": 0.3405776426701012,
+      "model_noise_variances": {
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "shape": [
+          5
+        ],
+        "type": "torch.Tensor"
+      },
+      "model_states": [
+        {
+          "net.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              1024
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              1024,
+              78
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.10.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.10.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64,
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.12.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.12.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64,
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.14.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              78
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.14.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              78,
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.2.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              512
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.2.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              512,
+              1024
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.4.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              256
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.4.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              256,
+              512
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.6.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.6.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128,
+              256
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.8.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.8.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64,
+              128
+            ],
+            "type": "torch.Tensor"
+          }
+        },
+        {
+          "net.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              1024
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              1024,
+              78
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.10.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.10.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64,
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.12.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.12.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64,
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.14.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              78
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.14.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              78,
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.2.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              512
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.2.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              512,
+              1024
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.4.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              256
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.4.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              256,
+              512
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.6.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.6.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128,
+              256
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.8.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.8.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64,
+              128
+            ],
+            "type": "torch.Tensor"
+          }
+        },
+        {
+          "net.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              1024
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              1024,
+              78
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.10.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.10.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64,
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.12.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.12.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64,
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.14.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              78
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.14.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              78,
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.2.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              512
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.2.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              512,
+              1024
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.4.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              256
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.4.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              256,
+              512
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.6.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.6.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128,
+              256
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.8.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.8.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64,
+              128
+            ],
+            "type": "torch.Tensor"
+          }
+        },
+        {
+          "net.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              1024
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              1024,
+              78
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.10.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.10.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64,
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.12.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.12.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64,
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.14.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              78
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.14.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              78,
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.2.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              512
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.2.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              512,
+              1024
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.4.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              256
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.4.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              256,
+              512
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.6.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.6.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128,
+              256
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.8.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.8.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64,
+              128
+            ],
+            "type": "torch.Tensor"
+          }
+        },
+        {
+          "net.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              1024
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              1024,
+              78
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.10.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.10.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64,
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.12.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.12.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64,
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.14.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              78
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.14.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              78,
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.2.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              512
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.2.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              512,
+              1024
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.4.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              256
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.4.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              256,
+              512
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.6.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.6.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128,
+              256
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.8.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64
+            ],
+            "type": "torch.Tensor"
+          },
+          "net.8.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              64,
+              128
+            ],
+            "type": "torch.Tensor"
+          }
+        }
+      ]
+    }
+  ],
+  "best_params": {
+    "learning_rate": 3.168916025578695e-05,
+    "optimizer_batch_size": 512
+  },
+  "best_value": 0.004829016614663942,
+  "best_variant_objective_values": [
+    0.004829016614663942
+  ],
+  "config_fingerprint": "4f774132bba964e4d31fe64a10374b020db5abd5c13a5e564b4e62bf258a4efc",
+  "config_name": "umi_3gpp",
+  "detector_metric": null,
+  "ebno_db": null,
+  "ebno_dbs": [
+    -10.0,
+    -5.0,
+    0.0,
+    5.0,
+    10.0
+  ],
+  "estimator_class": "InterpolatedDNNChannelEstimator",
+  "metric": "weighted_nmse",
+  "n_trials": 10,
+  "num_estimator_variants": 1,
+  "num_mc_batches_per_snr": 3,
+  "num_mc_batches_per_trial": 15,
+  "optimization_elapsed_seconds": 39706.859910456464,
+  "probe_seed": 4242,
+  "requested_n_trials": 10,
+  "sampler_seed": 123,
+  "scenario_id": "3gpp-umi",
+  "snr_points_per_trial": 5,
+  "snr_weights": [
+    0.1,
+    0.31622776601683794,
+    1.0,
+    3.1622776601683795,
+    10.0
+  ],
+  "storage": "sqlite:////home/gmarti/chest2sionna-v2-runs/tuning/melgar2022-v2-calibrated/training/study.db",
+  "study_name": "InterpolatedDNNChannelEstimator-3gpp-umi-4f774132bba9--10to10dB-weighted-nmse"
+}

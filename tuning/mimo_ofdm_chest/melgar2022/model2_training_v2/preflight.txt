@@ -1,0 +1,14 @@
+timestamp_utc=2026-08-31T15:53:44Z
+chest2sionna_source_snapshot=e77cbfb26dcb59f1b013d2bb5f5885bfafae5fdc
+chest2sionna_snapshot_parent=f57deeb1297e1060575adc55b7b5f33f36bd2bb3
+chest2sionna_snapshot_status=0
+pipeline_sha256=95c8437cc0c4936d577fc085a4d90565027136d2f2d6d320fa3bebc9ded22f96
+sionna_import_path=/home/gmarti/sionna/src/sionna/__init__.py
+sionna_commit=f16208347246d8d17ec69628dfb856b19287b80c
+sionna_status=0
+calibration_commit=ad1609ea1
+umi_spec_version=19.2
+feasibility_probe=one trial, five SNR-specific one-epoch models, one channel per split
+estimated_runtime_hours=15-25
+gpu=NVIDIA L40S, 580.126.09, 46068 MiB
+cpu=AMD EPYC 7R13 Processor

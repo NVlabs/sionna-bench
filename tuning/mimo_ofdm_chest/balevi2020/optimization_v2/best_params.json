@@ -1,0 +1,70 @@
+{
+  "batch_elements_per_snr": 12,
+  "batch_elements_per_trial": 60,
+  "batch_size_per_snr": 4,
+  "best_estimator_kwargs": {
+    "err_var_scale": 0.334,
+    "hidden_channels": 32,
+    "input_noise_scale": 0.6103428098763377,
+    "interpolation_type": "lin_time_avg",
+    "learning_rate": 0.0020735628628380286,
+    "num_hidden_layers": 6,
+    "num_steps": 668,
+    "precision": "single",
+    "seed": 42
+  },
+  "best_estimator_kwargs_variants": [
+    {
+      "err_var_scale": 0.334,
+      "hidden_channels": 32,
+      "input_noise_scale": 0.6103428098763377,
+      "interpolation_type": "lin_time_avg",
+      "learning_rate": 0.0020735628628380286,
+      "num_hidden_layers": 6,
+      "num_steps": 668,
+      "precision": "single",
+      "seed": 42
+    }
+  ],
+  "best_params": {
+    "input_noise_scale": 0.6103428098763377,
+    "learning_rate": 0.0020735628628380286,
+    "num_steps": 668
+  },
+  "best_value": 0.005091621349032229,
+  "best_variant_objective_values": [
+    0.005091621349032229
+  ],
+  "config_fingerprint": "4f774132bba964e4d31fe64a10374b020db5abd5c13a5e564b4e62bf258a4efc",
+  "config_name": "umi_3gpp",
+  "detector_metric": null,
+  "ebno_db": null,
+  "ebno_dbs": [
+    -10.0,
+    -5.0,
+    0.0,
+    5.0,
+    10.0
+  ],
+  "estimator_class": "DeepPriorChannelEstimator",
+  "metric": "weighted_nmse",
+  "n_trials": 30,
+  "num_estimator_variants": 1,
+  "num_mc_batches_per_snr": 3,
+  "num_mc_batches_per_trial": 15,
+  "optimization_elapsed_seconds": 2834.931232975796,
+  "probe_seed": 4242,
+  "requested_n_trials": 30,
+  "sampler_seed": 123,
+  "scenario_id": "3gpp-umi",
+  "snr_points_per_trial": 5,
+  "snr_weights": [
+    0.1,
+    0.31622776601683794,
+    1.0,
+    3.1622776601683795,
+    10.0
+  ],
+  "storage": "sqlite:////home/gmarti/chest2sionna-v2-runs/tuning/balevi2020-v2-calibrated/optimization/study.db",
+  "study_name": "DeepPriorChannelEstimator-3gpp-umi-4f774132bba9--10to10dB-weighted-nmse"
+}

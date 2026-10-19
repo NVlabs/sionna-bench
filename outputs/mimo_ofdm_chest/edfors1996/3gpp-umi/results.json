@@ -1,0 +1,61 @@
+{
+  "results_schema_version": 1,
+  "scenario_id": "3gpp-umi",
+  "config_fingerprint": "4f774132bba964e4d31fe64a10374b020db5abd5c13a5e564b4e62bf258a4efc",
+  "results": {
+    "TruncatedChannelEstimator (LMMSE)": {
+      "file": "TruncatedChannelEstimator (LMMSE).npz",
+      "estimator_class": "sionna.bench.mimo_ofdm_chest.papers.edfors1996.estimator.TruncatedChannelEstimator",
+      "constructor_arguments": {
+        "chest_err_const": 0.308,
+        "interpolation_type": "lin_time_avg",
+        "method": "LMMSE",
+        "num_taps": 64
+      },
+      "assets": [
+        {
+          "asset_type": "delay-covariance",
+          "artifact_id": "it1000-bs64-seed42",
+          "manifest_sha256": "33f761fba6d906a4d4eee55bcc73a1757de96a2842435d907eea2fcf3973d96e"
+        }
+      ],
+      "updated_at": "2026-10-10 17:14:39"
+    },
+    "TruncatedChannelEstimator (diag. LMMSE)": {
+      "file": "TruncatedChannelEstimator (diag. LMMSE).npz",
+      "estimator_class": "sionna.bench.mimo_ofdm_chest.papers.edfors1996.estimator.TruncatedChannelEstimator",
+      "constructor_arguments": {
+        "chest_err_const": 0.308,
+        "interpolation_type": "lin_time_avg",
+        "method": "diagonal LMMSE",
+        "num_taps": 64
+      },
+      "assets": [
+        {
+          "asset_type": "delay-covariance",
+          "artifact_id": "it1000-bs64-seed42",
+          "manifest_sha256": "33f761fba6d906a4d4eee55bcc73a1757de96a2842435d907eea2fcf3973d96e"
+        }
+      ],
+      "updated_at": "2026-10-10 17:15:18"
+    },
+    "TruncatedChannelEstimator (LS)": {
+      "file": "TruncatedChannelEstimator (LS).npz",
+      "estimator_class": "sionna.bench.mimo_ofdm_chest.papers.edfors1996.estimator.TruncatedChannelEstimator",
+      "constructor_arguments": {
+        "chest_err_const": 0.308,
+        "interpolation_type": "lin_time_avg",
+        "method": "LS",
+        "num_taps": 64
+      },
+      "assets": [
+        {
+          "asset_type": "delay-covariance",
+          "artifact_id": "it1000-bs64-seed42",
+          "manifest_sha256": "33f761fba6d906a4d4eee55bcc73a1757de96a2842435d907eea2fcf3973d96e"
+        }
+      ],
+      "updated_at": "2026-10-10 17:15:56"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "results_schema_version": 1,
+  "scenario_id": "3gpp-umi",
+  "config_fingerprint": "4f774132bba964e4d31fe64a10374b020db5abd5c13a5e564b4e62bf258a4efc",
+  "results": {
+    "SpectralGMMChannelEstimator": {
+      "file": "SpectralGMMChannelEstimator.npz",
+      "estimator_class": "sionna.bench.mimo_ofdm_chest.papers.koller2022.estimator.SpectralGMMChannelEstimator",
+      "constructor_arguments": {
+        "time_avg": true
+      },
+      "assets": [
+        {
+          "asset_type": "spectral-gmm",
+          "artifact_id": "k15-tb100-bs64-em15-reg0p001-seed22022",
+          "manifest_sha256": "81025df1d84e5796fc2e4009fc1fe4d8d8ba44e6e2b9cb49690604b13f1bc5a6"
+        }
+      ],
+      "updated_at": "2026-10-10 17:27:29"
+    },
+    "SpatialGMMChannelEstimator": {
+      "file": "SpatialGMMChannelEstimator.npz",
+      "estimator_class": "sionna.bench.mimo_ofdm_chest.papers.koller2022.estimator.SpatialGMMChannelEstimator",
+      "constructor_arguments": {
+        "interpolation_type": "lin_time_avg"
+      },
+      "assets": [
+        {
+          "asset_type": "spatial-gmm",
+          "artifact_id": "k20-tb100-bs64-em15-reg0p001-seed22022",
+          "manifest_sha256": "30c8bc322b0c46b33444291e9194d0e43506eeb06cceb26ac59a88edd2c350e6"
+        }
+      ],
+      "updated_at": "2026-10-10 17:28:07"
+    }
+  }
+}

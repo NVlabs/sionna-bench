@@ -1,0 +1,76 @@
+{
+  "batch_elements_per_snr": 12,
+  "batch_elements_per_trial": 60,
+  "batch_size_per_snr": 4,
+  "best_estimator_kwargs": {
+    "admm_num_iters": 18,
+    "admm_rho": 0.07996883844767257,
+    "diffuse_energy": 0.8068198785784523,
+    "diffuse_num_taps": 3,
+    "err_var_scale": 1.0,
+    "interpolation_type": "lin_time_avg",
+    "precision": "single",
+    "tau": 3.0,
+    "tau_max": 3.0,
+    "tau_min": 1e-06,
+    "tau_noise_scale": 6.548484063707546
+  },
+  "best_estimator_kwargs_variants": [
+    {
+      "admm_num_iters": 18,
+      "admm_rho": 0.07996883844767257,
+      "diffuse_energy": 0.8068198785784523,
+      "diffuse_num_taps": 3,
+      "err_var_scale": 1.0,
+      "interpolation_type": "lin_time_avg",
+      "precision": "single",
+      "tau": 3.0,
+      "tau_max": 3.0,
+      "tau_min": 1e-06,
+      "tau_noise_scale": 6.548484063707546
+    }
+  ],
+  "best_params": {
+    "admm_num_iters": 18,
+    "admm_rho": 0.07996883844767257,
+    "diffuse_energy": 0.8068198785784523,
+    "diffuse_num_taps": 3,
+    "tau_noise_scale": 6.548484063707546
+  },
+  "best_value": 0.005846822124655444,
+  "best_variant_objective_values": [
+    0.005846822124655444
+  ],
+  "config_fingerprint": "4f774132bba964e4d31fe64a10374b020db5abd5c13a5e564b4e62bf258a4efc",
+  "config_name": "umi_3gpp",
+  "detector_metric": null,
+  "ebno_db": null,
+  "ebno_dbs": [
+    -10.0,
+    -5.0,
+    0.0,
+    5.0,
+    10.0
+  ],
+  "estimator_class": "SparseDiffuseChannelEstimator",
+  "metric": "weighted_nmse",
+  "n_trials": 80,
+  "num_estimator_variants": 1,
+  "num_mc_batches_per_snr": 3,
+  "num_mc_batches_per_trial": 15,
+  "optimization_elapsed_seconds": 5526.3300880668685,
+  "probe_seed": 4242,
+  "requested_n_trials": 80,
+  "sampler_seed": 123,
+  "scenario_id": "3gpp-umi",
+  "snr_points_per_trial": 5,
+  "snr_weights": [
+    0.1,
+    0.31622776601683794,
+    1.0,
+    3.1622776601683795,
+    10.0
+  ],
+  "storage": "sqlite:////home/gmarti/chest2sionna-v2-runs/tuning/lyu2026-v2-calibrated/admm/study.db",
+  "study_name": "SparseDiffuseChannelEstimator-3gpp-umi-4f774132bba9--10to10dB-weighted-nmse"
+}

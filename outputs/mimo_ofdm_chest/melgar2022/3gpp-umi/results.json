@@ -1,0 +1,139 @@
+{
+  "results_schema_version": 1,
+  "scenario_id": "3gpp-umi",
+  "config_fingerprint": "4f774132bba964e4d31fe64a10374b020db5abd5c13a5e564b4e62bf258a4efc",
+  "results": {
+    "InterpolatedDNNChannelEstimator": {
+      "file": "InterpolatedDNNChannelEstimator.npz",
+      "estimator_class": "sionna.bench.mimo_ofdm_chest.papers.melgar2022.estimator.InterpolatedDNNChannelEstimator",
+      "constructor_arguments": {
+        "block_len": 78,
+        "err_var_scale": 0.341
+      },
+      "assets": [
+        {
+          "asset_type": "melgar-model3",
+          "artifact_id": "n78-tb800-bs8-vb32-vbs8-ep200-mb512-lr3p17e-05-mins0-pat20-md0p0001-mx4096-trsnrm10-h64-seed42",
+          "manifest_sha256": "5fbf97947a06612a2d6cdf6db4083481d6a4f166e86b9414fb02a5dfac7466c7"
+        },
+        {
+          "asset_type": "melgar-model3",
+          "artifact_id": "n78-tb800-bs8-vb32-vbs8-ep200-mb512-lr3p17e-05-mins0-pat20-md0p0001-mx4096-trsnrm7p5-h64-seed42",
+          "manifest_sha256": "b595aa07e05a4f65ff3125c5cc0dced549889b6b5997e94c6a16666aca0de5ed"
+        },
+        {
+          "asset_type": "melgar-model3",
+          "artifact_id": "n78-tb800-bs8-vb32-vbs8-ep200-mb512-lr3p17e-05-mins0-pat20-md0p0001-mx4096-trsnrm5-h64-seed42",
+          "manifest_sha256": "5b1edbbd97081c1ca2dab4a4701e842697adb11a562bb0a92678a25e793d8063"
+        },
+        {
+          "asset_type": "melgar-model3",
+          "artifact_id": "n78-tb800-bs8-vb32-vbs8-ep200-mb512-lr3p17e-05-mins0-pat20-md0p0001-mx4096-trsnrm2p5-h64-seed42",
+          "manifest_sha256": "078f5b6830d0834835db1acfa342afc95c11280f3b03384dd1dc1b2257a0e9d5"
+        },
+        {
+          "asset_type": "melgar-model3",
+          "artifact_id": "n78-tb800-bs8-vb32-vbs8-ep200-mb512-lr3p17e-05-mins0-pat20-md0p0001-mx4096-trsnr0-h64-seed42",
+          "manifest_sha256": "34f3db7d51339db068e579822c4e1771a2f0394d02ca752054a2db1c457c62de"
+        },
+        {
+          "asset_type": "melgar-model3",
+          "artifact_id": "n78-tb800-bs8-vb32-vbs8-ep200-mb512-lr3p17e-05-mins0-pat20-md0p0001-mx4096-trsnr2p5-h64-seed42",
+          "manifest_sha256": "4326ac70fca7342dda0c56985c007f363c218d0b2f83655f01792c201b484efd"
+        },
+        {
+          "asset_type": "melgar-model3",
+          "artifact_id": "n78-tb800-bs8-vb32-vbs8-ep200-mb512-lr3p17e-05-mins0-pat20-md0p0001-mx4096-trsnr5-h64-seed42",
+          "manifest_sha256": "e15db8d9172a482aa9e00870be2a5dc57b2fc198c57707ab9f51907c9c115aac"
+        },
+        {
+          "asset_type": "melgar-model3",
+          "artifact_id": "n78-tb800-bs8-vb32-vbs8-ep200-mb512-lr3p17e-05-mins0-pat20-md0p0001-mx4096-trsnr7p5-h64-seed42",
+          "manifest_sha256": "d22f6d6fb5cf4e12b9aa8b32645f66edbb8f272cc6f4292e67c35512e3c4892b"
+        },
+        {
+          "asset_type": "melgar-model3",
+          "artifact_id": "n78-tb800-bs8-vb32-vbs8-ep200-mb512-lr3p17e-05-mins0-pat20-md0p0001-mx4096-trsnr10-h64-seed42",
+          "manifest_sha256": "35e371cc546d2f67dddc331a32225e3c933c96293eefaa60704fed5daac9aa07"
+        },
+        {
+          "asset_type": "melgar-model3",
+          "artifact_id": "n78-tb800-bs8-vb32-vbs8-ep200-mb512-lr3p17e-05-mins0-pat20-md0p0001-mx4096-trsnr12p5-h64-seed42",
+          "manifest_sha256": "d4e1eeefca1058a490838b825c772952a24e29ab469134fc6c32b7341e16b467"
+        },
+        {
+          "asset_type": "melgar-model3",
+          "artifact_id": "n78-tb800-bs8-vb32-vbs8-ep200-mb512-lr3p17e-05-mins0-pat20-md0p0001-mx4096-trsnr15-h64-seed42",
+          "manifest_sha256": "ab5300186a78954883d131642fb915cb02522cb578bc6b2b5c36cd387576a8a7"
+        }
+      ],
+      "updated_at": "2026-10-10 18:29:14"
+    },
+    "DNNChannelEstimator": {
+      "file": "DNNChannelEstimator.npz",
+      "estimator_class": "sionna.bench.mimo_ofdm_chest.papers.melgar2022.estimator.DNNChannelEstimator",
+      "constructor_arguments": {
+        "err_var_scale": 0.454,
+        "interpolation_type": "lin_time_avg"
+      },
+      "assets": [
+        {
+          "asset_type": "melgar-model2",
+          "artifact_id": "n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnrm10-h64-seed42",
+          "manifest_sha256": "0d25ec5fa2ddf314b325482dca13441e5d15be864286b2163eca46fa206c9c63"
+        },
+        {
+          "asset_type": "melgar-model2",
+          "artifact_id": "n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnrm7p5-h64-seed42",
+          "manifest_sha256": "c4509066439cdbe3093a17a8095fc732aeb92d75a82016ad4ca46a5ecbb6aad0"
+        },
+        {
+          "asset_type": "melgar-model2",
+          "artifact_id": "n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnrm5-h64-seed42",
+          "manifest_sha256": "2fb2f738e6c2b60d0ea57dc1c7b7f76eae18ca25def019f3f1f2aa347cdfdf7b"
+        },
+        {
+          "asset_type": "melgar-model2",
+          "artifact_id": "n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnrm2p5-h64-seed42",
+          "manifest_sha256": "39dd8e0b2a10c054afda26cf5b8268d1c7c3e10687c3bd8e7ba9241e5b80c0db"
+        },
+        {
+          "asset_type": "melgar-model2",
+          "artifact_id": "n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr0-h64-seed42",
+          "manifest_sha256": "e03009478c434a02133229babaa9d1816876eb02e72e7769e9018a828998b864"
+        },
+        {
+          "asset_type": "melgar-model2",
+          "artifact_id": "n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr2p5-h64-seed42",
+          "manifest_sha256": "f31cdbea685575c5041ee550eb6c75fe728fad7fdf436f041b6d52c0f5e456f6"
+        },
+        {
+          "asset_type": "melgar-model2",
+          "artifact_id": "n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr5-h64-seed42",
+          "manifest_sha256": "323cf20de5b6a71076e4dc6e71ab0a876e62eeb7a9a21cce9a81c65538982e3d"
+        },
+        {
+          "asset_type": "melgar-model2",
+          "artifact_id": "n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr7p5-h64-seed42",
+          "manifest_sha256": "7e9d91c6b10ea5e09a3f758454bd5d217727c99aee02249ed1b218896d3fbb75"
+        },
+        {
+          "asset_type": "melgar-model2",
+          "artifact_id": "n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr10-h64-seed42",
+          "manifest_sha256": "981e6219fdedad80f3953f7d4ebd5cc240fe3e453eec3f125bc2a1d251859ff4"
+        },
+        {
+          "asset_type": "melgar-model2",
+          "artifact_id": "n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr12p5-h64-seed42",
+          "manifest_sha256": "522d97415d8ea0fccde3d4713dc46610bc04cec5c125376038d5bb529a6c8a68"
+        },
+        {
+          "asset_type": "melgar-model2",
+          "artifact_id": "n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr15-h64-seed42",
+          "manifest_sha256": "afcb230751228185d411677eec931c50f5494fc3851f0df67250eb136363ba0f"
+        }
+      ],
+      "updated_at": "2026-10-10 18:28:29"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "protocol_version": 2,
+  "metric": "mean_codeword_bler",
+  "method_weighting": "equal over all three Edfors methods",
+  "ebno_dbs": [
+    10.0
+  ],
+  "seed": 161803,
+  "num_mc_batches_per_snr": 63,
+  "batch_size": 4,
+  "raw_winner": {
+    "chest_err_const": 0.4540521216492649
+  },
+  "candidates": {
+    "current": 0.308,
+    "rounded_winner": 0.454
+  },
+  "objectives": {
+    "current": 0.033289241622574954,
+    "rounded_winner": 0.0333994708994709
+  },
+  "selected": "current",
+  "selected_scale": 0.308
+}

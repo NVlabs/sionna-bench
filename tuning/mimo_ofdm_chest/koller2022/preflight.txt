@@ -1,0 +1,10 @@
+timestamp_utc=2026-08-15T00:11:53Z
+chest2sionna_commit=5012974748d4b8aa6426e563d8fed1380eba3abc
+chest2sionna_tracked_diff_sha256=03b172aa0890b355ee413c788d448c54319aacc7eda53d502683a3e9395c27e2
+sionna_import_path=/home/gmarti/sionna/src/sionna/__init__.py
+sionna_commit=f16208347246d8d17ec69628dfb856b19287b80c
+sionna_status=0
+calibration_commit=ad1609ea1
+umi_spec_version=19.2
+gpu=NVIDIA L40S, 580.126.09, 46068 MiB
+cpu=AMD EPYC 7R13 Processor

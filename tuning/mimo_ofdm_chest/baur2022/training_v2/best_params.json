@@ -1,0 +1,3945 @@
+{
+  "batch_elements_per_snr": 12,
+  "batch_elements_per_trial": 60,
+  "batch_size_per_snr": 4,
+  "best_estimator_kwargs": {
+    "covariance_floor": 1e-05,
+    "covariance_mode": "full",
+    "err_var_scale": 0.5405613145449313,
+    "interpolation_type": "lin_time_avg",
+    "latent_dim": 16,
+    "model_noise_variances": {
+      "device": "cpu",
+      "dtype": "torch.float32",
+      "shape": [
+        5
+      ],
+      "type": "torch.Tensor"
+    },
+    "model_states": [
+      {
+        "decoder_cholesky.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            528
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_cholesky.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            528,
+            512
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_linear.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            512
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_linear.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            512,
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_log_covariance.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            1
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_log_covariance.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8,
+            1,
+            4
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_mean.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            1
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_mean.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8,
+            1,
+            4
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128,
+            32,
+            4
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.1.num_batches_tracked": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "shape": [],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.1.running_mean": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.1.running_var": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32,
+            8,
+            4
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.1.num_batches_tracked": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "shape": [],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.1.running_mean": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.1.running_var": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8,
+            1,
+            7
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.1.num_batches_tracked": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "shape": [],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.1.running_mean": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.1.running_var": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32,
+            8,
+            7
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.1.num_batches_tracked": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "shape": [],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.1.running_mean": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.1.running_var": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128,
+            32,
+            7
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.1.num_batches_tracked": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "shape": [],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.1.running_mean": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.1.running_var": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder_log_variance.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder_log_variance.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            512
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder_mean.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder_mean.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            512
+          ],
+          "type": "torch.Tensor"
+        }
+      },
+      {
+        "decoder_cholesky.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            528
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_cholesky.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            528,
+            512
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_linear.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            512
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_linear.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            512,
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_log_covariance.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            1
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_log_covariance.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8,
+            1,
+            4
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_mean.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            1
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_mean.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8,
+            1,
+            4
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128,
+            32,
+            4
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.1.num_batches_tracked": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "shape": [],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.1.running_mean": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.1.running_var": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32,
+            8,
+            4
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.1.num_batches_tracked": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "shape": [],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.1.running_mean": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.1.running_var": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8,
+            1,
+            7
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.1.num_batches_tracked": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "shape": [],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.1.running_mean": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.1.running_var": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32,
+            8,
+            7
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.1.num_batches_tracked": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "shape": [],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.1.running_mean": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.1.running_var": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128,
+            32,
+            7
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.1.num_batches_tracked": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "shape": [],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.1.running_mean": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.1.running_var": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder_log_variance.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder_log_variance.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            512
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder_mean.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder_mean.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            512
+          ],
+          "type": "torch.Tensor"
+        }
+      },
+      {
+        "decoder_cholesky.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            528
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_cholesky.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            528,
+            512
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_linear.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            512
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_linear.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            512,
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_log_covariance.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            1
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_log_covariance.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8,
+            1,
+            4
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_mean.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            1
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_mean.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8,
+            1,
+            4
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128,
+            32,
+            4
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.1.num_batches_tracked": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "shape": [],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.1.running_mean": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.1.running_var": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32,
+            8,
+            4
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.1.num_batches_tracked": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "shape": [],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.1.running_mean": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.1.running_var": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8,
+            1,
+            7
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.1.num_batches_tracked": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "shape": [],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.1.running_mean": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.1.running_var": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32,
+            8,
+            7
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.1.num_batches_tracked": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "shape": [],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.1.running_mean": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.1.running_var": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128,
+            32,
+            7
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.1.num_batches_tracked": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "shape": [],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.1.running_mean": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.1.running_var": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder_log_variance.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder_log_variance.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            512
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder_mean.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder_mean.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            512
+          ],
+          "type": "torch.Tensor"
+        }
+      },
+      {
+        "decoder_cholesky.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            528
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_cholesky.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            528,
+            512
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_linear.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            512
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_linear.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            512,
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_log_covariance.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            1
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_log_covariance.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8,
+            1,
+            4
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_mean.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            1
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_mean.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8,
+            1,
+            4
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128,
+            32,
+            4
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.1.num_batches_tracked": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "shape": [],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.1.running_mean": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.1.running_var": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32,
+            8,
+            4
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.1.num_batches_tracked": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "shape": [],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.1.running_mean": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.1.running_var": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8,
+            1,
+            7
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.1.num_batches_tracked": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "shape": [],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.1.running_mean": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.1.running_var": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32,
+            8,
+            7
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.1.num_batches_tracked": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "shape": [],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.1.running_mean": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.1.running_var": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128,
+            32,
+            7
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.1.num_batches_tracked": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "shape": [],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.1.running_mean": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.1.running_var": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder_log_variance.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder_log_variance.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            512
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder_mean.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder_mean.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            512
+          ],
+          "type": "torch.Tensor"
+        }
+      },
+      {
+        "decoder_cholesky.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            528
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_cholesky.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            528,
+            512
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_linear.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            512
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_linear.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            512,
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_log_covariance.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            1
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_log_covariance.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8,
+            1,
+            4
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_mean.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            1
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_mean.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8,
+            1,
+            4
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128,
+            32,
+            4
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.1.num_batches_tracked": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "shape": [],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.1.running_mean": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.1.running_var": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.0.1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32,
+            8,
+            4
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.1.num_batches_tracked": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "shape": [],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.1.running_mean": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.1.running_var": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "decoder_trunk.1.1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8,
+            1,
+            7
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.1.num_batches_tracked": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "shape": [],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.1.running_mean": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.1.running_var": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.0.1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            8
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32,
+            8,
+            7
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.1.num_batches_tracked": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "shape": [],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.1.running_mean": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.1.running_var": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.1.1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128,
+            32,
+            7
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.1.num_batches_tracked": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "shape": [],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.1.running_mean": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.1.running_var": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder.2.1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder_log_variance.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder_log_variance.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            512
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder_mean.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "encoder_mean.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            512
+          ],
+          "type": "torch.Tensor"
+        }
+      }
+    ],
+    "num_rx_ant": 16
+  },
+  "best_estimator_kwargs_variants": [
+    {
+      "covariance_floor": 1e-05,
+      "covariance_mode": "full",
+      "err_var_scale": 0.5405613145449313,
+      "interpolation_type": "lin_time_avg",
+      "latent_dim": 16,
+      "model_noise_variances": {
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "shape": [
+          5
+        ],
+        "type": "torch.Tensor"
+      },
+      "model_states": [
+        {
+          "decoder_cholesky.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              528
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_cholesky.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              528,
+              512
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_linear.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              512
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_linear.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              512,
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_log_covariance.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              1
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_log_covariance.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8,
+              1,
+              4
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_mean.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              1
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_mean.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8,
+              1,
+              4
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128,
+              32,
+              4
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.1.num_batches_tracked": {
+            "device": "cpu",
+            "dtype": "torch.int64",
+            "shape": [],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.1.running_mean": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.1.running_var": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32,
+              8,
+              4
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.1.num_batches_tracked": {
+            "device": "cpu",
+            "dtype": "torch.int64",
+            "shape": [],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.1.running_mean": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.1.running_var": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8,
+              1,
+              7
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.1.num_batches_tracked": {
+            "device": "cpu",
+            "dtype": "torch.int64",
+            "shape": [],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.1.running_mean": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.1.running_var": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32,
+              8,
+              7
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.1.num_batches_tracked": {
+            "device": "cpu",
+            "dtype": "torch.int64",
+            "shape": [],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.1.running_mean": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.1.running_var": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128,
+              32,
+              7
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.1.num_batches_tracked": {
+            "device": "cpu",
+            "dtype": "torch.int64",
+            "shape": [],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.1.running_mean": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.1.running_var": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder_log_variance.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder_log_variance.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              512
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder_mean.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder_mean.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              512
+            ],
+            "type": "torch.Tensor"
+          }
+        },
+        {
+          "decoder_cholesky.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              528
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_cholesky.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              528,
+              512
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_linear.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              512
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_linear.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              512,
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_log_covariance.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              1
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_log_covariance.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8,
+              1,
+              4
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_mean.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              1
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_mean.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8,
+              1,
+              4
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128,
+              32,
+              4
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.1.num_batches_tracked": {
+            "device": "cpu",
+            "dtype": "torch.int64",
+            "shape": [],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.1.running_mean": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.1.running_var": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32,
+              8,
+              4
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.1.num_batches_tracked": {
+            "device": "cpu",
+            "dtype": "torch.int64",
+            "shape": [],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.1.running_mean": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.1.running_var": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8,
+              1,
+              7
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.1.num_batches_tracked": {
+            "device": "cpu",
+            "dtype": "torch.int64",
+            "shape": [],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.1.running_mean": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.1.running_var": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32,
+              8,
+              7
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.1.num_batches_tracked": {
+            "device": "cpu",
+            "dtype": "torch.int64",
+            "shape": [],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.1.running_mean": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.1.running_var": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128,
+              32,
+              7
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.1.num_batches_tracked": {
+            "device": "cpu",
+            "dtype": "torch.int64",
+            "shape": [],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.1.running_mean": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.1.running_var": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder_log_variance.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder_log_variance.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              512
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder_mean.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder_mean.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              512
+            ],
+            "type": "torch.Tensor"
+          }
+        },
+        {
+          "decoder_cholesky.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              528
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_cholesky.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              528,
+              512
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_linear.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              512
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_linear.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              512,
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_log_covariance.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              1
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_log_covariance.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8,
+              1,
+              4
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_mean.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              1
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_mean.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8,
+              1,
+              4
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128,
+              32,
+              4
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.1.num_batches_tracked": {
+            "device": "cpu",
+            "dtype": "torch.int64",
+            "shape": [],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.1.running_mean": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.1.running_var": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32,
+              8,
+              4
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.1.num_batches_tracked": {
+            "device": "cpu",
+            "dtype": "torch.int64",
+            "shape": [],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.1.running_mean": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.1.running_var": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8,
+              1,
+              7
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.1.num_batches_tracked": {
+            "device": "cpu",
+            "dtype": "torch.int64",
+            "shape": [],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.1.running_mean": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.1.running_var": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32,
+              8,
+              7
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.1.num_batches_tracked": {
+            "device": "cpu",
+            "dtype": "torch.int64",
+            "shape": [],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.1.running_mean": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.1.running_var": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128,
+              32,
+              7
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.1.num_batches_tracked": {
+            "device": "cpu",
+            "dtype": "torch.int64",
+            "shape": [],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.1.running_mean": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.1.running_var": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder_log_variance.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder_log_variance.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              512
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder_mean.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder_mean.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              512
+            ],
+            "type": "torch.Tensor"
+          }
+        },
+        {
+          "decoder_cholesky.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              528
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_cholesky.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              528,
+              512
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_linear.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              512
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_linear.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              512,
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_log_covariance.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              1
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_log_covariance.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8,
+              1,
+              4
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_mean.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              1
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_mean.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8,
+              1,
+              4
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128,
+              32,
+              4
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.1.num_batches_tracked": {
+            "device": "cpu",
+            "dtype": "torch.int64",
+            "shape": [],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.1.running_mean": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.1.running_var": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32,
+              8,
+              4
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.1.num_batches_tracked": {
+            "device": "cpu",
+            "dtype": "torch.int64",
+            "shape": [],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.1.running_mean": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.1.running_var": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8,
+              1,
+              7
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.1.num_batches_tracked": {
+            "device": "cpu",
+            "dtype": "torch.int64",
+            "shape": [],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.1.running_mean": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.1.running_var": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32,
+              8,
+              7
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.1.num_batches_tracked": {
+            "device": "cpu",
+            "dtype": "torch.int64",
+            "shape": [],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.1.running_mean": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.1.running_var": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128,
+              32,
+              7
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.1.num_batches_tracked": {
+            "device": "cpu",
+            "dtype": "torch.int64",
+            "shape": [],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.1.running_mean": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.1.running_var": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder_log_variance.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder_log_variance.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              512
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder_mean.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder_mean.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              512
+            ],
+            "type": "torch.Tensor"
+          }
+        },
+        {
+          "decoder_cholesky.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              528
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_cholesky.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              528,
+              512
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_linear.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              512
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_linear.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              512,
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_log_covariance.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              1
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_log_covariance.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8,
+              1,
+              4
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_mean.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              1
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_mean.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8,
+              1,
+              4
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128,
+              32,
+              4
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.1.num_batches_tracked": {
+            "device": "cpu",
+            "dtype": "torch.int64",
+            "shape": [],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.1.running_mean": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.1.running_var": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.0.1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32,
+              8,
+              4
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.1.num_batches_tracked": {
+            "device": "cpu",
+            "dtype": "torch.int64",
+            "shape": [],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.1.running_mean": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.1.running_var": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "decoder_trunk.1.1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8,
+              1,
+              7
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.1.num_batches_tracked": {
+            "device": "cpu",
+            "dtype": "torch.int64",
+            "shape": [],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.1.running_mean": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.1.running_var": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.0.1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              8
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32,
+              8,
+              7
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.1.num_batches_tracked": {
+            "device": "cpu",
+            "dtype": "torch.int64",
+            "shape": [],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.1.running_mean": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.1.running_var": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.1.1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              32
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.0.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.0.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128,
+              32,
+              7
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.1.num_batches_tracked": {
+            "device": "cpu",
+            "dtype": "torch.int64",
+            "shape": [],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.1.running_mean": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.1.running_var": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder.2.1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              128
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder_log_variance.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder_log_variance.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              512
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder_mean.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "encoder_mean.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              512
+            ],
+            "type": "torch.Tensor"
+          }
+        }
+      ],
+      "num_rx_ant": 16
+    }
+  ],
+  "best_params": {
+    "free_bits": 0.8754568417951749,
+    "latent_dim": 16,
+    "learning_rate": 0.0002304631701668831,
+    "optimizer_batch_size": 512
+  },
+  "best_value": 0.0043486137233802735,
+  "best_variant_objective_values": [
+    0.0043486137233802735
+  ],
+  "config_fingerprint": "4f774132bba964e4d31fe64a10374b020db5abd5c13a5e564b4e62bf258a4efc",
+  "config_name": "umi_3gpp",
+  "detector_metric": null,
+  "ebno_db": null,
+  "ebno_dbs": [
+    -10.0,
+    -5.0,
+    0.0,
+    5.0,
+    10.0
+  ],
+  "estimator_class": "VAEChannelEstimator",
+  "metric": "weighted_nmse",
+  "n_trials": 12,
+  "num_estimator_variants": 1,
+  "num_mc_batches_per_snr": 3,
+  "num_mc_batches_per_trial": 15,
+  "optimization_elapsed_seconds": 63479.133855264634,
+  "probe_seed": 4242,
+  "requested_n_trials": 1,
+  "sampler_seed": 123,
+  "scenario_id": "3gpp-umi",
+  "snr_points_per_trial": 5,
+  "snr_weights": [
+    0.1,
+    0.31622776601683794,
+    1.0,
+    3.1622776601683795,
+    10.0
+  ],
+  "storage": "sqlite:////home/gmarti/chest2sionna-v2-runs/tuning/baur2022-v2-calibrated/training/study.db",
+  "study_name": "VAEChannelEstimator-3gpp-umi-4f774132bba9--10to10dB-weighted-nmse"
+}

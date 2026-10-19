@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sionna-bench"
+version = "0.1.0"
+description = "Benchmarkable Sionna implementations of OFDM channel-estimation methods from research papers"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = [
+    "LICENSE",
+    "Licenses",
+]
+requires-python = ">=3.12, <3.13"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "sionna>=2.1,<2.2",
+    "torch==2.11.0",
+    "numpy==2.4.4",
+    "scipy==1.17.1"
+]
+
+[project.optional-dependencies]
+test = ["pytest==9.0.3"]
+tuning = ["optuna==4.9.0"]
+test-lyu = ["pytest==9.0.3", "cvxpy==1.9.1"]
+all = ["pytest==9.0.3", "optuna==4.9.0", "cvxpy==1.9.1"]
+docs = [
+    "sphinx",
+    "pydata-sphinx-theme",
+    "sphinxcontrib-bibtex",
+    "myst-parser",
+    "sphinx-copybutton",
+]
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["sionna.bench*"]
+exclude = [
+    "sionna.bench.mimo_ofdm_chest.papers.delfeld2025*",
+    "sionna.bench.mimo_ofdm_chest.papers.*.assets*",
+    "sionna.bench.mimo_ofdm_chest.papers.*.reports*",
+]
+namespaces = true
+
+[tool.pytest.ini_options]
+testpaths = ["test"]
+pythonpath = ["src"]
+markers = [
+    "system_variants: end-to-end checks across noncanonical system geometries",
+    "training: tests that fit or train temporary estimator assets",
+    "compile: tests of torch.compile behavior",
+    "slow: tests excluded from the default fast development loop",
+]

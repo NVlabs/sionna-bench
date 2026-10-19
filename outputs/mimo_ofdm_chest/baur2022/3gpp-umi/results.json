@@ -1,0 +1,76 @@
+{
+  "results_schema_version": 1,
+  "scenario_id": "3gpp-umi",
+  "config_fingerprint": "4f774132bba964e4d31fe64a10374b020db5abd5c13a5e564b4e62bf258a4efc",
+  "results": {
+    "VAEChannelEstimator": {
+      "file": "VAEChannelEstimator.npz",
+      "estimator_class": "sionna.bench.mimo_ofdm_chest.papers.baur2022.estimator.VAEChannelEstimator",
+      "constructor_arguments": {
+        "covariance_floor": 1e-05,
+        "covariance_mode": "full",
+        "err_var_scale": 0.541,
+        "interpolation_type": "lin_time_avg",
+        "latent_dim": 16
+      },
+      "assets": [
+        {
+          "asset_type": "vae-noisy",
+          "artifact_id": "n32-z16-tb400-bs16-vb16-vbs16-ep200-mb512-lr0p00023-fb0p875-mins0-pat20-rmd0p0001-cf1e-05-covfull-trsnrm10-seed42",
+          "manifest_sha256": "2630acee91041cc82b55065e93adc22f6a27ff64e5b75eb4f5952c009f5f3c06"
+        },
+        {
+          "asset_type": "vae-noisy",
+          "artifact_id": "n32-z16-tb400-bs16-vb16-vbs16-ep200-mb512-lr0p00023-fb0p875-mins0-pat20-rmd0p0001-cf1e-05-covfull-trsnrm7p5-seed42",
+          "manifest_sha256": "390e62967fae850c3ad76b443b29610921d494b407c77300f0375bcf38d1dd63"
+        },
+        {
+          "asset_type": "vae-noisy",
+          "artifact_id": "n32-z16-tb400-bs16-vb16-vbs16-ep200-mb512-lr0p00023-fb0p875-mins0-pat20-rmd0p0001-cf1e-05-covfull-trsnrm5-seed42",
+          "manifest_sha256": "6efa09513dd2f02791dbc66c4acd1935556d4398c744917ce1dabaf63652b32d"
+        },
+        {
+          "asset_type": "vae-noisy",
+          "artifact_id": "n32-z16-tb400-bs16-vb16-vbs16-ep200-mb512-lr0p00023-fb0p875-mins0-pat20-rmd0p0001-cf1e-05-covfull-trsnrm2p5-seed42",
+          "manifest_sha256": "d27bb62bb2865dc4fabdf2c80901fc1c5490204a206243a43a2c8bf4fa77cc4f"
+        },
+        {
+          "asset_type": "vae-noisy",
+          "artifact_id": "n32-z16-tb400-bs16-vb16-vbs16-ep200-mb512-lr0p00023-fb0p875-mins0-pat20-rmd0p0001-cf1e-05-covfull-trsnr0-seed42",
+          "manifest_sha256": "3df14ef2fdf2e122a7a3cac7e8ffcd79f23dd25de15e0a368e4986cc33d7011f"
+        },
+        {
+          "asset_type": "vae-noisy",
+          "artifact_id": "n32-z16-tb400-bs16-vb16-vbs16-ep200-mb512-lr0p00023-fb0p875-mins0-pat20-rmd0p0001-cf1e-05-covfull-trsnr2p5-seed42",
+          "manifest_sha256": "cd4b74936ccb367092105cc192960c478bd6d89e1c0ea95443a8b01fb9ca7185"
+        },
+        {
+          "asset_type": "vae-noisy",
+          "artifact_id": "n32-z16-tb400-bs16-vb16-vbs16-ep200-mb512-lr0p00023-fb0p875-mins0-pat20-rmd0p0001-cf1e-05-covfull-trsnr5-seed42",
+          "manifest_sha256": "0622688086e0ff9c87eb85354563b1700d5a94208e72ede3a617a2332aca09f9"
+        },
+        {
+          "asset_type": "vae-noisy",
+          "artifact_id": "n32-z16-tb400-bs16-vb16-vbs16-ep200-mb512-lr0p00023-fb0p875-mins0-pat20-rmd0p0001-cf1e-05-covfull-trsnr7p5-seed42",
+          "manifest_sha256": "0099ba9ae179a1cf94d8349041e93ac536f71c145d0a292e94b98efa2ce92470"
+        },
+        {
+          "asset_type": "vae-noisy",
+          "artifact_id": "n32-z16-tb400-bs16-vb16-vbs16-ep200-mb512-lr0p00023-fb0p875-mins0-pat20-rmd0p0001-cf1e-05-covfull-trsnr10-seed42",
+          "manifest_sha256": "0e7b70194aba665c81b8567c17b9c86ff5d7acf756ff29d7fcb0d368d7130a39"
+        },
+        {
+          "asset_type": "vae-noisy",
+          "artifact_id": "n32-z16-tb400-bs16-vb16-vbs16-ep200-mb512-lr0p00023-fb0p875-mins0-pat20-rmd0p0001-cf1e-05-covfull-trsnr12p5-seed42",
+          "manifest_sha256": "56cfedbfd117c0b8a08eeefcfdeb138accb4678a7aa4d6adade1314d70fa410f"
+        },
+        {
+          "asset_type": "vae-noisy",
+          "artifact_id": "n32-z16-tb400-bs16-vb16-vbs16-ep200-mb512-lr0p00023-fb0p875-mins0-pat20-rmd0p0001-cf1e-05-covfull-trsnr15-seed42",
+          "manifest_sha256": "eebc6770f7cf43f7f1d4c5ec118f5384f6b9edd9a79b2ea63d3a76dff8db5877"
+        }
+      ],
+      "updated_at": "2026-10-10 18:30:41"
+    }
+  }
+}

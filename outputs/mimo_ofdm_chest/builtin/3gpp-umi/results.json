@@ -1,0 +1,41 @@
+{
+  "results_schema_version": 1,
+  "scenario_id": "3gpp-umi",
+  "config_fingerprint": "4f774132bba964e4d31fe64a10374b020db5abd5c13a5e564b4e62bf258a4efc",
+  "results": {
+    "LS (nearest neighbor)": {
+      "file": "LS (nearest neighbor).npz",
+      "estimator_class": "sionna.bench.mimo_ofdm_chest.papers.builtin.estimator.LSEstimatorWrapper",
+      "constructor_arguments": {
+        "interpolation_type": "nn"
+      },
+      "assets": [],
+      "updated_at": "2026-10-10 16:44:20"
+    },
+    "LS (linear)": {
+      "file": "LS (linear).npz",
+      "estimator_class": "sionna.bench.mimo_ofdm_chest.papers.builtin.estimator.LSEstimatorWrapper",
+      "constructor_arguments": {
+        "interpolation_type": "lin"
+      },
+      "assets": [],
+      "updated_at": "2026-10-10 16:44:57"
+    },
+    "LMMSE": {
+      "file": "LMMSE.npz",
+      "estimator_class": "sionna.bench.mimo_ofdm_chest.papers.builtin.estimator.LMMSEEstimatorWrapper",
+      "constructor_arguments": {
+        "batch_chunk_size": 1,
+        "order": "t-f-s"
+      },
+      "assets": [
+        {
+          "asset_type": "lmmse-covariance",
+          "artifact_id": "default",
+          "manifest_sha256": "602d96d08c160db27498e815670bf083b97bea13448190e3894337a10659d794"
+        }
+      ],
+      "updated_at": "2026-10-10 17:10:59"
+    }
+  }
+}

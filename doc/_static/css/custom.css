@@ -1,0 +1,134 @@
+/* SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved. */
+/* SPDX-License-Identifier: Apache-2.0 */
+  /* html[data-theme="dark"] {
+    --pst-color-text-base: #FFFFFF;
+    --pst-color-text-muted: #E0E0E0;
+    --pst-color-heading: #FFFFFF;
+    --pst-color-link: #76B900;
+    --pst-color-link-higher-contrast: #76B900;
+    --pst-color-primary: #76B900;
+    --pst-color-secondary: #76B900;
+    --pst-color-hover: #76B900;
+    --pst-color-inline-code: #E0E0E0;
+    --pst-color-border: #4B4B4B;
+    --pst-color-background: #000000;
+    --pst-color-on-background: #4B4B4B;
+    --pst-color-surface: #313131;
+  } */
+
+  html[data-theme="light"] {
+    --pst-color-text-base: #000000;
+    --pst-color-text-muted: #444444;
+    --pst-color-heading: #000000;
+    --pst-color-link: #AA3333;
+    --pst-color-link-higher-contrast: #AA3333;
+    --pst-color-primary: #AA3333;
+    --pst-color-secondary: #AA3333;
+    --pst-color-hover: #AA3333;
+    --pst-color-inline-code: #444444;
+    --pst-color-border: #777777;
+    --pst-color-background: #FEFCFB;
+    --pst-color-on-background: #C5C0C0;
+    --pst-color-surface: #F5F0F0;
+    --pst-color-table-row-zebra-low-bg: var(--pst-color-background);
+    --pst-color-table-row-zebra-high-bg: var(--pst-color-surface);
+  }
+
+  .tocsection.sourcelink {
+    display: none;
+  }
+
+  table.estimator-overview tbody td:first-child:not([colspan]) {
+    padding-left: 1.5rem;
+  }
+  table.estimator-overview th:nth-child(n + 2):nth-child(-n + 4),
+  table.estimator-overview td:nth-child(n + 2):nth-child(-n + 4) {
+    text-align: center;
+  }
+
+  .bibliography-box {
+    margin: 0.75rem;
+    padding: 0.75rem;
+    border: 1px solid var(--pst-color-border);
+    border-radius: 4px;
+    background: var(--pst-color-surface);
+    color: var(--pst-color-text-base);
+    font-family: var(--pst-font-family-monospace);
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+}
+
+.bd-content .pst-scrollable-table-container > table.table,
+.bd-content .pst-scrollable-table-container > table.table thead,
+.bd-content .pst-scrollable-table-container > table.table tbody,
+.bd-content .pst-scrollable-table-container > table.table tr,
+.bd-content .pst-scrollable-table-container > table.table th,
+.bd-content .pst-scrollable-table-container > table.table td {
+  border: 0;
+}
+
+.bd-content dt:target {
+  background-color: transparent;
+}
+
+.bd-content .pst-scrollable-table-container > table.table thead tr {
+  border-bottom: 2pt solid var(--pst-color-primary);
+}
+
+.bd-content .admonition.note {
+  --pst-color-info: var(--pst-color-primary);
+  --pst-color-info-bg: var(--pst-color-background);
+}
+
+.bd-content .admonition.note {
+  background-color: var(--pst-color-background);
+  border-left-color: var(--pst-color-primary) !important;
+}
+
+.bd-content .admonition.note > .admonition-title {
+  background-color: var(--pst-color-on-background);
+}
+
+.bd-content .admonition.note > .admonition-title::after {
+  color: var(--pst-color-primary);
+}
+
+
+.bibliography-box ul {
+    margin: 0;
+    padding: 0 0 0 0.75rem;
+    list-style: none;
+}
+
+.bibliography-box p {
+    margin: 0;
+}
+
+/* Python class, method, and function signatures. */
+.bd-article dt.sig {
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.bd-article code.literal {
+  /* padding: 0; */
+  border: 0;
+  border-radius: 0;
+  /* background: transparent; */
+}
+
+@media (min-width: 960px) {
+  .bd-header .navbar-header-items__start {
+    margin-right: 14rem;
+  }
+
+  .bd-header .bd-navbar-elements {
+    column-gap: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .bd-header .bd-page-width {
+    max-width: calc(88rem + 200px);
+  }
+}

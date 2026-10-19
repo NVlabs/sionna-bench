@@ -1,0 +1,128 @@
+{
+  "manifest": {
+    "path": "/home/gmarti/chest2sionna-v2-runs/tuning/melgar2022-model2-calibrated/data-assets/3gpp-umi/melgar2022/melgar-model2-training-data/train6400-val256-snrm10-m7p5-m5-m2p5-0-2p5-5-7p5-10-12p5-15-n156-capall-seed42/manifest.json",
+    "sha256": "ea6883bee8506a7d3b0c75036547c38017fd3ffc145fc91ef71287d32f28b727"
+  },
+  "payloads": [
+    {
+      "path": "train-targets.npy",
+      "sha256": "288d8168a8e2d1614433de126cb23373f085cdd6b4f547caed2cca90d1bb4f94",
+      "size_bytes": 511180928
+    },
+    {
+      "path": "train-inputs-snr-m10.npy",
+      "sha256": "680d9c4e15f0e5700091e1161b2c68918a724242e059edd2eca738baf1dfcf53",
+      "size_bytes": 511180928
+    },
+    {
+      "path": "train-inputs-snr-m7p5.npy",
+      "sha256": "b7c6b744b7d70b95d1ff648a94e0c4c4a5f32e54d3f2fa782a7b8a5e2f1b4c12",
+      "size_bytes": 511180928
+    },
+    {
+      "path": "train-inputs-snr-m5.npy",
+      "sha256": "26787d2aa10290366f6061b4d2f9f852721e8333d700e1ae2a0a18ca133cfb41",
+      "size_bytes": 511180928
+    },
+    {
+      "path": "train-inputs-snr-m2p5.npy",
+      "sha256": "b7d9312b351cb532f12955b86530f57dc5dda503f7db5979ef738c80fded211d",
+      "size_bytes": 511180928
+    },
+    {
+      "path": "train-inputs-snr-0.npy",
+      "sha256": "f79a65d5314fe8093a1edcbdaadf6736a02253fd2ec7c8831633463b9e49367d",
+      "size_bytes": 511180928
+    },
+    {
+      "path": "train-inputs-snr-2p5.npy",
+      "sha256": "0a7465933a5b766cda30cfe48cfbc98ead92e0a1c9058b56a62ec8cd033cd75b",
+      "size_bytes": 511180928
+    },
+    {
+      "path": "train-inputs-snr-5.npy",
+      "sha256": "841e9ef65fff8b6fe81c05a629376779f30f48c7453c12742104e5208eba97ab",
+      "size_bytes": 511180928
+    },
+    {
+      "path": "train-inputs-snr-7p5.npy",
+      "sha256": "f1e6ecbca8a32ad1ece303201535940f4ee3c3d66706a2b137f4c091a73ed899",
+      "size_bytes": 511180928
+    },
+    {
+      "path": "train-inputs-snr-10.npy",
+      "sha256": "b9b18272cd0dc36f66c8afeb08d3b8ce560ea61f072d739c7066009bdeed54fe",
+      "size_bytes": 511180928
+    },
+    {
+      "path": "train-inputs-snr-12p5.npy",
+      "sha256": "31e36e7b506f24fc6d1602217a001f0174719a4019fd376837e3cf6529ee9bba",
+      "size_bytes": 511180928
+    },
+    {
+      "path": "train-inputs-snr-15.npy",
+      "sha256": "a51b281af3a33645105669122dbc633de6c90112992c77bc1e71350d58d883c3",
+      "size_bytes": 511180928
+    },
+    {
+      "path": "validation-targets.npy",
+      "sha256": "284d920391f8f95a022e414b9f07c0c191ebcff5c671636c200cd57c343d3ec7",
+      "size_bytes": 20447360
+    },
+    {
+      "path": "validation-inputs-snr-m10.npy",
+      "sha256": "986609e4dadb0ea29f3af7292eb0c5f58150a26d47037f60d53a13857bd99b5f",
+      "size_bytes": 20447360
+    },
+    {
+      "path": "validation-inputs-snr-m7p5.npy",
+      "sha256": "6ec019e5ebaff870a88e6635ee1547f72a03f2ecaa41461951422878c80973e5",
+      "size_bytes": 20447360
+    },
+    {
+      "path": "validation-inputs-snr-m5.npy",
+      "sha256": "ef2594f0ce309538a6204b65332a434f7dbcb02736bd5e78a2ed586387635148",
+      "size_bytes": 20447360
+    },
+    {
+      "path": "validation-inputs-snr-m2p5.npy",
+      "sha256": "3b10c83fea42c4b37d82b64f1777ef5a7cda3d6ce47a524ac03a185c62514cec",
+      "size_bytes": 20447360
+    },
+    {
+      "path": "validation-inputs-snr-0.npy",
+      "sha256": "8a30e0f37697ead31fe01cae811b0ca875ede528c1b334f670ca579d7161eb11",
+      "size_bytes": 20447360
+    },
+    {
+      "path": "validation-inputs-snr-2p5.npy",
+      "sha256": "4674805daee925e2e0124a5ff3ddcdee7b6f0b05af6119380d94d6239ffaf2a6",
+      "size_bytes": 20447360
+    },
+    {
+      "path": "validation-inputs-snr-5.npy",
+      "sha256": "4ab3606c1bfe21892a1f1fbd4aeb9f4cafbd127de411c55e69530f0458c2279c",
+      "size_bytes": 20447360
+    },
+    {
+      "path": "validation-inputs-snr-7p5.npy",
+      "sha256": "e6d67d32eb191d4f53dce94b4342db93f2f59d1510f4ebb42776e20c64bc602b",
+      "size_bytes": 20447360
+    },
+    {
+      "path": "validation-inputs-snr-10.npy",
+      "sha256": "7849d0ed5debb7e9f3efebfb65f459f3a921e3ef9b4bbc5c1e548aac8b923c50",
+      "size_bytes": 20447360
+    },
+    {
+      "path": "validation-inputs-snr-12p5.npy",
+      "sha256": "fd9846cbd3674381d7cf34e674450603cb263639350a5645608518097308faca",
+      "size_bytes": 20447360
+    },
+    {
+      "path": "validation-inputs-snr-15.npy",
+      "sha256": "fc2e038d4874a45831672ef9df8bd9c9bc8f6541e7a9d50fea709d9c2517d082",
+      "size_bytes": 20447360
+    }
+  ]
+}

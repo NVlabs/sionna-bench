@@ -1,0 +1,64 @@
+{
+  "batch_elements_per_snr": 12,
+  "batch_elements_per_trial": 60,
+  "batch_size_per_snr": 4,
+  "best_estimator_kwargs": {
+    "alpha_init": 0.002592776428399033,
+    "interpolation_type": "lin_time_avg",
+    "num_iter": 10,
+    "num_taps": 156,
+    "posterior_variance_scale": 0.755,
+    "precision": "single"
+  },
+  "best_estimator_kwargs_variants": [
+    {
+      "alpha_init": 0.002592776428399033,
+      "interpolation_type": "lin_time_avg",
+      "num_iter": 10,
+      "num_taps": 156,
+      "posterior_variance_scale": 0.755,
+      "precision": "single"
+    }
+  ],
+  "best_params": {
+    "alpha_init": 0.002592776428399033,
+    "num_iter": 10,
+    "num_taps": 156
+  },
+  "best_value": 0.004178389339985936,
+  "best_variant_objective_values": [
+    0.004178389339985936
+  ],
+  "config_fingerprint": "4f774132bba964e4d31fe64a10374b020db5abd5c13a5e564b4e62bf258a4efc",
+  "config_name": "umi_3gpp",
+  "detector_metric": null,
+  "ebno_db": null,
+  "ebno_dbs": [
+    -10.0,
+    -5.0,
+    0.0,
+    5.0,
+    10.0
+  ],
+  "estimator_class": "SBLChannelEstimator",
+  "metric": "weighted_nmse",
+  "n_trials": 50,
+  "num_estimator_variants": 1,
+  "num_mc_batches_per_snr": 3,
+  "num_mc_batches_per_trial": 15,
+  "optimization_elapsed_seconds": 10.532715634442866,
+  "probe_seed": 4242,
+  "requested_n_trials": 50,
+  "sampler_seed": 123,
+  "scenario_id": "3gpp-umi",
+  "snr_points_per_trial": 5,
+  "snr_weights": [
+    0.1,
+    0.31622776601683794,
+    1.0,
+    3.1622776601683795,
+    10.0
+  ],
+  "storage": "sqlite:////home/gmarti/chest2sionna-v2-runs/tuning/wei2017-v2-calibrated/sbl/study.db",
+  "study_name": "SBLChannelEstimator-3gpp-umi-4f774132bba9--10to10dB-weighted-nmse"
+}

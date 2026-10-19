@@ -1,0 +1,60 @@
+{
+  "protocol_version": 2,
+  "metric": "weighted_nmse",
+  "ebno_dbs": [
+    -10.0,
+    -5.0,
+    0.0,
+    5.0,
+    10.0
+  ],
+  "snr_weights": [
+    0.1,
+    0.31622776601683794,
+    1.0,
+    3.1622776601683795,
+    10.0
+  ],
+  "seed": 314159,
+  "num_mc_batches_per_snr": 63,
+  "batch_size": 4,
+  "raw_winner": {
+    "learning_rate": 3.168916025578695e-05,
+    "optimizer_batch_size": 512
+  },
+  "candidates": {
+    "current": {
+      "learning_rate": 0.0001,
+      "optimizer_batch_size": 4096
+    },
+    "rounded_winner": {
+      "learning_rate": 3.17e-05,
+      "optimizer_batch_size": 512
+    }
+  },
+  "objectives": {
+    "current": 0.005637904627207314,
+    "rounded_winner": 0.004890910391028793
+  },
+  "model_manifests": {
+    "current": [
+      "/home/gmarti/chest2sionna-v2-runs/tuning/melgar2022-v2-calibrated/trial-assets/3gpp-umi/melgar2022/melgar-model3/n78-tb800-bs8-vb32-vbs8-ep200-mb4096-lr0p0001-mins0-pat20-md0p0001-mx4096-trsnrm10-h64-seed42/manifest.json",
+      "/home/gmarti/chest2sionna-v2-runs/tuning/melgar2022-v2-calibrated/trial-assets/3gpp-umi/melgar2022/melgar-model3/n78-tb800-bs8-vb32-vbs8-ep200-mb4096-lr0p0001-mins0-pat20-md0p0001-mx4096-trsnrm5-h64-seed42/manifest.json",
+      "/home/gmarti/chest2sionna-v2-runs/tuning/melgar2022-v2-calibrated/trial-assets/3gpp-umi/melgar2022/melgar-model3/n78-tb800-bs8-vb32-vbs8-ep200-mb4096-lr0p0001-mins0-pat20-md0p0001-mx4096-trsnr0-h64-seed42/manifest.json",
+      "/home/gmarti/chest2sionna-v2-runs/tuning/melgar2022-v2-calibrated/trial-assets/3gpp-umi/melgar2022/melgar-model3/n78-tb800-bs8-vb32-vbs8-ep200-mb4096-lr0p0001-mins0-pat20-md0p0001-mx4096-trsnr5-h64-seed42/manifest.json",
+      "/home/gmarti/chest2sionna-v2-runs/tuning/melgar2022-v2-calibrated/trial-assets/3gpp-umi/melgar2022/melgar-model3/n78-tb800-bs8-vb32-vbs8-ep200-mb4096-lr0p0001-mins0-pat20-md0p0001-mx4096-trsnr10-h64-seed42/manifest.json"
+    ],
+    "rounded_winner": [
+      "/home/gmarti/chest2sionna-v2-runs/tuning/melgar2022-v2-calibrated/trial-assets/3gpp-umi/melgar2022/melgar-model3/n78-tb800-bs8-vb32-vbs8-ep200-mb512-lr3p17e-05-mins0-pat20-md0p0001-mx4096-trsnrm10-h64-seed42/manifest.json",
+      "/home/gmarti/chest2sionna-v2-runs/tuning/melgar2022-v2-calibrated/trial-assets/3gpp-umi/melgar2022/melgar-model3/n78-tb800-bs8-vb32-vbs8-ep200-mb512-lr3p17e-05-mins0-pat20-md0p0001-mx4096-trsnrm5-h64-seed42/manifest.json",
+      "/home/gmarti/chest2sionna-v2-runs/tuning/melgar2022-v2-calibrated/trial-assets/3gpp-umi/melgar2022/melgar-model3/n78-tb800-bs8-vb32-vbs8-ep200-mb512-lr3p17e-05-mins0-pat20-md0p0001-mx4096-trsnr0-h64-seed42/manifest.json",
+      "/home/gmarti/chest2sionna-v2-runs/tuning/melgar2022-v2-calibrated/trial-assets/3gpp-umi/melgar2022/melgar-model3/n78-tb800-bs8-vb32-vbs8-ep200-mb512-lr3p17e-05-mins0-pat20-md0p0001-mx4096-trsnr5-h64-seed42/manifest.json",
+      "/home/gmarti/chest2sionna-v2-runs/tuning/melgar2022-v2-calibrated/trial-assets/3gpp-umi/melgar2022/melgar-model3/n78-tb800-bs8-vb32-vbs8-ep200-mb512-lr3p17e-05-mins0-pat20-md0p0001-mx4096-trsnr10-h64-seed42/manifest.json"
+    ]
+  },
+  "selected": "rounded_winner",
+  "selected_parameters": {
+    "learning_rate": 3.17e-05,
+    "optimizer_batch_size": 512
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "batch_elements_per_snr": 252,
+  "batch_elements_per_trial": 252,
+  "batch_size_per_snr": 4,
+  "best_estimator_kwargs": {
+    "posterior_variance_scale": 0.06491437795831466
+  },
+  "best_estimator_kwargs_variants": [
+    {
+      "posterior_variance_scale": 0.06491437795831466
+    }
+  ],
+  "best_params": {
+    "posterior_variance_scale": 0.06491437795831466
+  },
+  "best_value": 0.022486772486772486,
+  "best_variant_objective_values": [
+    0.022486772486772486
+  ],
+  "config_fingerprint": "4f774132bba964e4d31fe64a10374b020db5abd5c13a5e564b4e62bf258a4efc",
+  "config_name": "umi_3gpp",
+  "detector_metric": "bler",
+  "ebno_db": 10.0,
+  "ebno_dbs": [
+    10.0
+  ],
+  "estimator_class": "SBLChannelEstimator",
+  "metric": "weighted_detector",
+  "n_trials": 10,
+  "num_estimator_variants": 1,
+  "num_mc_batches_per_snr": 63,
+  "num_mc_batches_per_trial": 63,
+  "optimization_elapsed_seconds": 14.936114299111068,
+  "probe_seed": 271828,
+  "requested_n_trials": 10,
+  "sampler_seed": 456,
+  "scenario_id": "3gpp-umi",
+  "snr_points_per_trial": 1,
+  "snr_weights": [
+    1.0
+  ],
+  "storage": "sqlite:////home/gmarti/chest2sionna-v2-runs/tuning/wei2017-v2-calibrated/variance/study.db",
+  "study_name": "SBLChannelEstimator-3gpp-umi-4f774132bba9-10dB-weighted-detector"
+}

@@ -1,0 +1,44 @@
+{
+  "protocol_version": 2,
+  "metric": "weighted_nmse",
+  "ebno_dbs": [
+    -10.0,
+    -5.0,
+    0.0,
+    5.0,
+    10.0
+  ],
+  "snr_weights": [
+    0.1,
+    0.31622776601683794,
+    1.0,
+    3.1622776601683795,
+    10.0
+  ],
+  "seed": 314159,
+  "num_mc_batches_per_snr": 63,
+  "batch_size": 4,
+  "raw_winner": {
+    "lowpass_cutoff": 0.13096202677999685,
+    "lowpass_filter_half_length": 15
+  },
+  "candidates": {
+    "current": {
+      "lowpass_filter_half_length": 16,
+      "lowpass_cutoff": 0.105
+    },
+    "rounded_winner": {
+      "lowpass_filter_half_length": 15,
+      "lowpass_cutoff": 0.131
+    }
+  },
+  "objectives": {
+    "current": 0.014546855397130133,
+    "rounded_winner": 0.015799561211600647
+  },
+  "selected": "current",
+  "selected_parameters": {
+    "lowpass_filter_half_length": 16,
+    "lowpass_cutoff": 0.105
+  }
+}

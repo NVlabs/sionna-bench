@@ -1,0 +1,20 @@
+{
+  "results_schema_version": 1,
+  "scenario_id": "3gpp-umi",
+  "config_fingerprint": "4f774132bba964e4d31fe64a10374b020db5abd5c13a5e564b4e62bf258a4efc",
+  "results": {
+    "SBLChannelEstimator": {
+      "file": "SBLChannelEstimator.npz",
+      "estimator_class": "sionna.bench.mimo_ofdm_chest.papers.wei2017.estimator.SBLChannelEstimator",
+      "constructor_arguments": {
+        "alpha_init": 0.00259,
+        "interpolation_type": "lin_time_avg",
+        "num_iter": 10,
+        "num_taps": null,
+        "posterior_variance_scale": 0.755
+      },
+      "assets": [],
+      "updated_at": "2026-10-10 18:27:47"
+    }
+  }
+}

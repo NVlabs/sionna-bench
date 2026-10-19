@@ -1,0 +1,8 @@
+version = "1.0"
+
+
+[oss.excluded]
+
+[[oss.excluded.directories]]
+paths   = ['doc/build/']
+comment = 'generated documentation output, not shipped source'

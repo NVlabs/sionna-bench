@@ -1,0 +1,72 @@
+{
+  "results_schema_version": 1,
+  "scenario_id": "3gpp-umi",
+  "config_fingerprint": "4f774132bba964e4d31fe64a10374b020db5abd5c13a5e564b4e62bf258a4efc",
+  "results": {
+    "ReEsNetChannelEstimator": {
+      "file": "ReEsNetChannelEstimator.npz",
+      "estimator_class": "sionna.bench.mimo_ofdm_chest.papers.li2020.estimator.ReEsNetChannelEstimator",
+      "constructor_arguments": {
+        "err_var_scale": 0.234
+      },
+      "assets": [
+        {
+          "asset_type": "reesnet",
+          "artifact_id": "in156x2-out624x14-tb400-bs16-vb16-vbs16-ep200-mb256-lr0p000186-pat20-rmd0p0001-snrm10-per-snr-bodyskip-paper-speed-seed42",
+          "manifest_sha256": "9bd189e830fa0943eacbaea5cc6d03ae78fa328354bd0bf5d0cc46347a0b4642"
+        },
+        {
+          "asset_type": "reesnet",
+          "artifact_id": "in156x2-out624x14-tb400-bs16-vb16-vbs16-ep200-mb256-lr0p000186-pat20-rmd0p0001-snrm7p5-per-snr-bodyskip-paper-speed-seed42",
+          "manifest_sha256": "8084dd7b3ad324baf0a45bbcc52d9b763622d7e90815d823b495ff528c3539f6"
+        },
+        {
+          "asset_type": "reesnet",
+          "artifact_id": "in156x2-out624x14-tb400-bs16-vb16-vbs16-ep200-mb256-lr0p000186-pat20-rmd0p0001-snrm5-per-snr-bodyskip-paper-speed-seed42",
+          "manifest_sha256": "8b1912ef077551739cace2305d8ccebbca1c0b9103e54cff866d905372f59ce0"
+        },
+        {
+          "asset_type": "reesnet",
+          "artifact_id": "in156x2-out624x14-tb400-bs16-vb16-vbs16-ep200-mb256-lr0p000186-pat20-rmd0p0001-snrm2p5-per-snr-bodyskip-paper-speed-seed42",
+          "manifest_sha256": "780be4e639f46cfea4fbb3a7af15e727d9aa074bb9da970953859615898c0474"
+        },
+        {
+          "asset_type": "reesnet",
+          "artifact_id": "in156x2-out624x14-tb400-bs16-vb16-vbs16-ep200-mb256-lr0p000186-pat20-rmd0p0001-snr0-per-snr-bodyskip-paper-speed-seed42",
+          "manifest_sha256": "2f91d18cfa7c56a7eb067c4582b8db8e5e8159a5f5056263265c8b4a6d137c62"
+        },
+        {
+          "asset_type": "reesnet",
+          "artifact_id": "in156x2-out624x14-tb400-bs16-vb16-vbs16-ep200-mb256-lr0p000186-pat20-rmd0p0001-snr2p5-per-snr-bodyskip-paper-speed-seed42",
+          "manifest_sha256": "e737a0cdb8450be1cb2efb0f2e889d9a39384de46f862016c4dd240469e434d1"
+        },
+        {
+          "asset_type": "reesnet",
+          "artifact_id": "in156x2-out624x14-tb400-bs16-vb16-vbs16-ep200-mb256-lr0p000186-pat20-rmd0p0001-snr5-per-snr-bodyskip-paper-speed-seed42",
+          "manifest_sha256": "77d5691464d44a7b2a8f89ec9996fe989e7ab73fe2f5d4e05978583b48880e4a"
+        },
+        {
+          "asset_type": "reesnet",
+          "artifact_id": "in156x2-out624x14-tb400-bs16-vb16-vbs16-ep200-mb256-lr0p000186-pat20-rmd0p0001-snr7p5-per-snr-bodyskip-paper-speed-seed42",
+          "manifest_sha256": "81e07c9d0c008de9a4b65cd3125784bc80f313950640b1026917325d9a07bfd1"
+        },
+        {
+          "asset_type": "reesnet",
+          "artifact_id": "in156x2-out624x14-tb400-bs16-vb16-vbs16-ep200-mb256-lr0p000186-pat20-rmd0p0001-snr10-per-snr-bodyskip-paper-speed-seed42",
+          "manifest_sha256": "a92d0e1fc0e0fcd02f56f473cbc155244474a00f655baa7f978cb520277e714d"
+        },
+        {
+          "asset_type": "reesnet",
+          "artifact_id": "in156x2-out624x14-tb400-bs16-vb16-vbs16-ep200-mb256-lr0p000186-pat20-rmd0p0001-snr12p5-per-snr-bodyskip-paper-speed-seed42",
+          "manifest_sha256": "0dd7c3862f9533d254a6d1ea548947d5efea25fb3157b7e8f8e6d9afd0af6a61"
+        },
+        {
+          "asset_type": "reesnet",
+          "artifact_id": "in156x2-out624x14-tb400-bs16-vb16-vbs16-ep200-mb256-lr0p000186-pat20-rmd0p0001-snr15-per-snr-bodyskip-paper-speed-seed42",
+          "manifest_sha256": "d58b750d7b5865ea130c7e551368e897ee933c817b9f1c9a034f54af27f09f8d"
+        }
+      ],
+      "updated_at": "2026-10-10 18:29:57"
+    }
+  }
+}

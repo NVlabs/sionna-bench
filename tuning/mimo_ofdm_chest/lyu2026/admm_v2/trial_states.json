@@ -1,0 +1,6 @@
+{
+  "required_complete_trials": 80,
+  "states": {
+    "complete": 80
+  }
+}

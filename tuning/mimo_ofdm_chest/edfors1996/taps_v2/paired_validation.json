@@ -1,0 +1,35 @@
+{
+  "protocol_version": 2,
+  "metric": "weighted_nmse",
+  "method": "LS",
+  "ebno_dbs": [
+    -10.0,
+    -5.0,
+    0.0,
+    5.0,
+    10.0
+  ],
+  "snr_weights": [
+    0.1,
+    0.31622776601683794,
+    1.0,
+    3.1622776601683795,
+    10.0
+  ],
+  "seed": 314159,
+  "num_mc_batches_per_snr": 63,
+  "batch_size": 4,
+  "raw_winner": {
+    "num_taps": 61
+  },
+  "candidates": {
+    "current": 64,
+    "winner": 61
+  },
+  "objectives": {
+    "current": 0.00889008178325196,
+    "winner": 0.009036960406574467
+  },
+  "selected": "current",
+  "selected_num_taps": 64
+}

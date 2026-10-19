@@ -1,0 +1,23 @@
+{
+  "results_schema_version": 1,
+  "scenario_id": "3gpp-umi",
+  "config_fingerprint": "4f774132bba964e4d31fe64a10374b020db5abd5c13a5e564b4e62bf258a4efc",
+  "results": {
+    "DeepPriorChannelEstimator": {
+      "file": "DeepPriorChannelEstimator.npz",
+      "estimator_class": "sionna.bench.mimo_ofdm_chest.papers.balevi2020.estimator.DeepPriorChannelEstimator",
+      "constructor_arguments": {
+        "err_var_scale": 0.454,
+        "hidden_channels": 32,
+        "input_noise_scale": 1.7,
+        "interpolation_type": "lin_time_avg",
+        "learning_rate": 0.000698,
+        "num_hidden_layers": 6,
+        "num_steps": 1597,
+        "seed": 42
+      },
+      "assets": [],
+      "updated_at": "2026-10-10 20:40:48"
+    }
+  }
+}

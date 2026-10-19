@@ -1,0 +1,2373 @@
+{
+  "batch_elements_per_snr": 12,
+  "batch_elements_per_trial": 60,
+  "batch_size_per_snr": 4,
+  "best_estimator_kwargs": {
+    "err_var_scale": 0.23432889192166198,
+    "model_noise_variances": {
+      "device": "cpu",
+      "dtype": "torch.float32",
+      "shape": [
+        5
+      ],
+      "type": "torch.Tensor"
+    },
+    "model_states": [
+      {
+        "blocks.0.conv1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.0.conv1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.0.conv2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.0.conv2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.1.conv1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.1.conv1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.1.conv2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.1.conv2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.2.conv1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.2.conv1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.2.conv2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.2.conv2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.3.conv1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.3.conv1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.3.conv2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.3.conv2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "input_conv.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "input_conv.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            2,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "output_conv.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            2
+          ],
+          "type": "torch.Tensor"
+        },
+        "output_conv.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            2,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "post_blocks_conv.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "post_blocks_conv.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "upsampling.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "upsampling.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            4,
+            7
+          ],
+          "type": "torch.Tensor"
+        }
+      },
+      {
+        "blocks.0.conv1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.0.conv1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.0.conv2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.0.conv2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.1.conv1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.1.conv1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.1.conv2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.1.conv2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.2.conv1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.2.conv1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.2.conv2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.2.conv2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.3.conv1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.3.conv1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.3.conv2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.3.conv2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "input_conv.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "input_conv.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            2,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "output_conv.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            2
+          ],
+          "type": "torch.Tensor"
+        },
+        "output_conv.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            2,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "post_blocks_conv.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "post_blocks_conv.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "upsampling.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "upsampling.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            4,
+            7
+          ],
+          "type": "torch.Tensor"
+        }
+      },
+      {
+        "blocks.0.conv1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.0.conv1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.0.conv2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.0.conv2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.1.conv1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.1.conv1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.1.conv2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.1.conv2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.2.conv1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.2.conv1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.2.conv2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.2.conv2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.3.conv1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.3.conv1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.3.conv2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.3.conv2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "input_conv.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "input_conv.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            2,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "output_conv.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            2
+          ],
+          "type": "torch.Tensor"
+        },
+        "output_conv.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            2,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "post_blocks_conv.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "post_blocks_conv.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "upsampling.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "upsampling.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            4,
+            7
+          ],
+          "type": "torch.Tensor"
+        }
+      },
+      {
+        "blocks.0.conv1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.0.conv1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.0.conv2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.0.conv2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.1.conv1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.1.conv1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.1.conv2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.1.conv2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.2.conv1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.2.conv1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.2.conv2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.2.conv2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.3.conv1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.3.conv1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.3.conv2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.3.conv2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "input_conv.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "input_conv.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            2,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "output_conv.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            2
+          ],
+          "type": "torch.Tensor"
+        },
+        "output_conv.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            2,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "post_blocks_conv.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "post_blocks_conv.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "upsampling.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "upsampling.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            4,
+            7
+          ],
+          "type": "torch.Tensor"
+        }
+      },
+      {
+        "blocks.0.conv1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.0.conv1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.0.conv2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.0.conv2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.1.conv1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.1.conv1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.1.conv2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.1.conv2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.2.conv1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.2.conv1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.2.conv2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.2.conv2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.3.conv1.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.3.conv1.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.3.conv2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "blocks.3.conv2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "input_conv.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "input_conv.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            2,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "output_conv.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            2
+          ],
+          "type": "torch.Tensor"
+        },
+        "output_conv.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            2,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "post_blocks_conv.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "post_blocks_conv.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "upsampling.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16
+          ],
+          "type": "torch.Tensor"
+        },
+        "upsampling.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            16,
+            16,
+            4,
+            7
+          ],
+          "type": "torch.Tensor"
+        }
+      }
+    ]
+  },
+  "best_estimator_kwargs_variants": [
+    {
+      "err_var_scale": 0.23432889192166198,
+      "model_noise_variances": {
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "shape": [
+          5
+        ],
+        "type": "torch.Tensor"
+      },
+      "model_states": [
+        {
+          "blocks.0.conv1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.0.conv1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.0.conv2.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.0.conv2.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.1.conv1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.1.conv1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.1.conv2.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.1.conv2.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.2.conv1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.2.conv1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.2.conv2.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.2.conv2.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.3.conv1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.3.conv1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.3.conv2.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.3.conv2.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "input_conv.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "input_conv.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              2,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "output_conv.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              2
+            ],
+            "type": "torch.Tensor"
+          },
+          "output_conv.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              2,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "post_blocks_conv.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "post_blocks_conv.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "upsampling.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "upsampling.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              4,
+              7
+            ],
+            "type": "torch.Tensor"
+          }
+        },
+        {
+          "blocks.0.conv1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.0.conv1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.0.conv2.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.0.conv2.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.1.conv1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.1.conv1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.1.conv2.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.1.conv2.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.2.conv1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.2.conv1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.2.conv2.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.2.conv2.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.3.conv1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.3.conv1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.3.conv2.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.3.conv2.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "input_conv.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "input_conv.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              2,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "output_conv.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              2
+            ],
+            "type": "torch.Tensor"
+          },
+          "output_conv.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              2,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "post_blocks_conv.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "post_blocks_conv.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "upsampling.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "upsampling.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              4,
+              7
+            ],
+            "type": "torch.Tensor"
+          }
+        },
+        {
+          "blocks.0.conv1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.0.conv1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.0.conv2.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.0.conv2.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.1.conv1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.1.conv1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.1.conv2.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.1.conv2.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.2.conv1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.2.conv1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.2.conv2.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.2.conv2.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.3.conv1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.3.conv1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.3.conv2.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.3.conv2.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "input_conv.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "input_conv.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              2,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "output_conv.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              2
+            ],
+            "type": "torch.Tensor"
+          },
+          "output_conv.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              2,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "post_blocks_conv.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "post_blocks_conv.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "upsampling.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "upsampling.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              4,
+              7
+            ],
+            "type": "torch.Tensor"
+          }
+        },
+        {
+          "blocks.0.conv1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.0.conv1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.0.conv2.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.0.conv2.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.1.conv1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.1.conv1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.1.conv2.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.1.conv2.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.2.conv1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.2.conv1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.2.conv2.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.2.conv2.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.3.conv1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.3.conv1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.3.conv2.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.3.conv2.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "input_conv.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "input_conv.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              2,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "output_conv.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              2
+            ],
+            "type": "torch.Tensor"
+          },
+          "output_conv.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              2,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "post_blocks_conv.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "post_blocks_conv.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "upsampling.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "upsampling.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              4,
+              7
+            ],
+            "type": "torch.Tensor"
+          }
+        },
+        {
+          "blocks.0.conv1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.0.conv1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.0.conv2.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.0.conv2.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.1.conv1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.1.conv1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.1.conv2.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.1.conv2.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.2.conv1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.2.conv1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.2.conv2.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.2.conv2.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.3.conv1.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.3.conv1.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.3.conv2.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "blocks.3.conv2.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "input_conv.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "input_conv.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              2,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "output_conv.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              2
+            ],
+            "type": "torch.Tensor"
+          },
+          "output_conv.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              2,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "post_blocks_conv.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "post_blocks_conv.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              3,
+              3
+            ],
+            "type": "torch.Tensor"
+          },
+          "upsampling.bias": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16
+            ],
+            "type": "torch.Tensor"
+          },
+          "upsampling.weight": {
+            "device": "cpu",
+            "dtype": "torch.float32",
+            "shape": [
+              16,
+              16,
+              4,
+              7
+            ],
+            "type": "torch.Tensor"
+          }
+        }
+      ]
+    }
+  ],
+  "best_params": {
+    "learning_rate": 0.0001856957298624054,
+    "optimizer_batch_size": 256
+  },
+  "best_value": 0.003475044092801484,
+  "best_variant_objective_values": [
+    0.003475044092801484
+  ],
+  "config_fingerprint": "4f774132bba964e4d31fe64a10374b020db5abd5c13a5e564b4e62bf258a4efc",
+  "config_name": "umi_3gpp",
+  "detector_metric": null,
+  "ebno_db": null,
+  "ebno_dbs": [
+    -10.0,
+    -5.0,
+    0.0,
+    5.0,
+    10.0
+  ],
+  "estimator_class": "ReEsNetChannelEstimator",
+  "metric": "weighted_nmse",
+  "n_trials": 10,
+  "num_estimator_variants": 1,
+  "num_mc_batches_per_snr": 3,
+  "num_mc_batches_per_trial": 15,
+  "optimization_elapsed_seconds": 105266.03771965671,
+  "probe_seed": 4242,
+  "requested_n_trials": 10,
+  "sampler_seed": 123,
+  "scenario_id": "3gpp-umi",
+  "snr_points_per_trial": 5,
+  "snr_weights": [
+    0.1,
+    0.31622776601683794,
+    1.0,
+    3.1622776601683795,
+    10.0
+  ],
+  "storage": "sqlite:////home/gmarti/chest2sionna-v2-runs/tuning/li2020-v2-calibrated/training/study.db",
+  "study_name": "ReEsNetChannelEstimator-3gpp-umi-4f774132bba9--10to10dB-weighted-nmse"
+}

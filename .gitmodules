@@ -1,0 +1,3 @@
+[submodule "ext/delfeld2025"]
+	path = ext/delfeld2025
+	url = ../sionna-bench-rkhs.git

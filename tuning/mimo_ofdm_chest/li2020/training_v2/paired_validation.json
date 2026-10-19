@@ -1,0 +1,60 @@
+{
+  "protocol_version": 2,
+  "metric": "weighted_nmse",
+  "ebno_dbs": [
+    -10.0,
+    -5.0,
+    0.0,
+    5.0,
+    10.0
+  ],
+  "snr_weights": [
+    0.1,
+    0.31622776601683794,
+    1.0,
+    3.1622776601683795,
+    10.0
+  ],
+  "seed": 314159,
+  "num_mc_batches_per_snr": 63,
+  "batch_size": 4,
+  "raw_winner": {
+    "learning_rate": 0.0001856957298624054,
+    "optimizer_batch_size": 256
+  },
+  "candidates": {
+    "current": {
+      "learning_rate": 0.0003,
+      "optimizer_batch_size": 128
+    },
+    "rounded_winner": {
+      "learning_rate": 0.000186,
+      "optimizer_batch_size": 256
+    }
+  },
+  "objectives": {
+    "current": 0.004462771437951752,
+    "rounded_winner": 0.004450867117664744
+  },
+  "model_manifests": {
+    "current": [
+      "/home/gmarti/chest2sionna-v2-runs/tuning/li2020-v2-calibrated/trial-assets/3gpp-umi/li2020/reesnet/in156x2-out624x14-tb400-bs16-vb16-vbs16-ep200-mb128-lr0p0003-pat20-rmd0p0001-snrm10-per-snr-bodyskip-paper-speed-seed42/manifest.json",
+      "/home/gmarti/chest2sionna-v2-runs/tuning/li2020-v2-calibrated/trial-assets/3gpp-umi/li2020/reesnet/in156x2-out624x14-tb400-bs16-vb16-vbs16-ep200-mb128-lr0p0003-pat20-rmd0p0001-snrm5-per-snr-bodyskip-paper-speed-seed42/manifest.json",
+      "/home/gmarti/chest2sionna-v2-runs/tuning/li2020-v2-calibrated/trial-assets/3gpp-umi/li2020/reesnet/in156x2-out624x14-tb400-bs16-vb16-vbs16-ep200-mb128-lr0p0003-pat20-rmd0p0001-snr0-per-snr-bodyskip-paper-speed-seed42/manifest.json",
+      "/home/gmarti/chest2sionna-v2-runs/tuning/li2020-v2-calibrated/trial-assets/3gpp-umi/li2020/reesnet/in156x2-out624x14-tb400-bs16-vb16-vbs16-ep200-mb128-lr0p0003-pat20-rmd0p0001-snr5-per-snr-bodyskip-paper-speed-seed42/manifest.json",
+      "/home/gmarti/chest2sionna-v2-runs/tuning/li2020-v2-calibrated/trial-assets/3gpp-umi/li2020/reesnet/in156x2-out624x14-tb400-bs16-vb16-vbs16-ep200-mb128-lr0p0003-pat20-rmd0p0001-snr10-per-snr-bodyskip-paper-speed-seed42/manifest.json"
+    ],
+    "rounded_winner": [
+      "/home/gmarti/chest2sionna-v2-runs/tuning/li2020-v2-calibrated/trial-assets/3gpp-umi/li2020/reesnet/in156x2-out624x14-tb400-bs16-vb16-vbs16-ep200-mb256-lr0p000186-pat20-rmd0p0001-snrm10-per-snr-bodyskip-paper-speed-seed42/manifest.json",
+      "/home/gmarti/chest2sionna-v2-runs/tuning/li2020-v2-calibrated/trial-assets/3gpp-umi/li2020/reesnet/in156x2-out624x14-tb400-bs16-vb16-vbs16-ep200-mb256-lr0p000186-pat20-rmd0p0001-snrm5-per-snr-bodyskip-paper-speed-seed42/manifest.json",
+      "/home/gmarti/chest2sionna-v2-runs/tuning/li2020-v2-calibrated/trial-assets/3gpp-umi/li2020/reesnet/in156x2-out624x14-tb400-bs16-vb16-vbs16-ep200-mb256-lr0p000186-pat20-rmd0p0001-snr0-per-snr-bodyskip-paper-speed-seed42/manifest.json",
+      "/home/gmarti/chest2sionna-v2-runs/tuning/li2020-v2-calibrated/trial-assets/3gpp-umi/li2020/reesnet/in156x2-out624x14-tb400-bs16-vb16-vbs16-ep200-mb256-lr0p000186-pat20-rmd0p0001-snr5-per-snr-bodyskip-paper-speed-seed42/manifest.json",
+      "/home/gmarti/chest2sionna-v2-runs/tuning/li2020-v2-calibrated/trial-assets/3gpp-umi/li2020/reesnet/in156x2-out624x14-tb400-bs16-vb16-vbs16-ep200-mb256-lr0p000186-pat20-rmd0p0001-snr10-per-snr-bodyskip-paper-speed-seed42/manifest.json"
+    ]
+  },
+  "selected": "rounded_winner",
+  "selected_parameters": {
+    "learning_rate": 0.000186,
+    "optimizer_batch_size": 256
+  }
+}

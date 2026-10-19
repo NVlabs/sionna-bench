@@ -1,0 +1,23 @@
+{
+  "protocol_version": 2,
+  "metric": "codeword_bler",
+  "ebno_dbs": [
+    10.0
+  ],
+  "seed": 161803,
+  "num_mc_batches_per_snr": 63,
+  "batch_size": 4,
+  "raw_winner": {
+    "err_var_scale": 0.005575293412686262
+  },
+  "candidates": {
+    "current": 0.341,
+    "rounded_winner": 0.00558
+  },
+  "objectives": {
+    "current": 0.02017195767195767,
+    "rounded_winner": 0.020833333333333332
+  },
+  "selected": "current",
+  "selected_scale": 0.341
+}

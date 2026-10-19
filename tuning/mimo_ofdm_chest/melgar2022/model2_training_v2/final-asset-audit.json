@@ -1,0 +1,603 @@
+{
+  "asset_root": "/home/gmarti/chest2sionna-v2-runs/tuning/melgar2022-model2-calibrated/final-assets",
+  "training_data_manifest": "/home/gmarti/chest2sionna-v2-runs/tuning/melgar2022-model2-calibrated/data-assets/3gpp-umi/melgar2022/melgar-model2-training-data/train6400-val256-snrm10-m7p5-m5-m2p5-0-2p5-5-7p5-10-12p5-15-n156-capall-seed42/manifest.json",
+  "training_data_manifest_sha256": "ea6883bee8506a7d3b0c75036547c38017fd3ffc145fc91ef71287d32f28b727",
+  "manifest_count": 11,
+  "expected_manifest_count": 11,
+  "manifest_count_valid": true,
+  "observed_snr_dbs": [
+    -10.0,
+    -7.5,
+    -5.0,
+    -2.5,
+    0.0,
+    2.5,
+    5.0,
+    7.5,
+    10.0,
+    12.5,
+    15.0
+  ],
+  "observed_snr_counts": {
+    "-10.0": 1,
+    "-7.5": 1,
+    "-5.0": 1,
+    "-2.5": 1,
+    "0.0": 1,
+    "2.5": 1,
+    "5.0": 1,
+    "7.5": 1,
+    "10.0": 1,
+    "12.5": 1,
+    "15.0": 1
+  },
+  "expected_snr_dbs": [
+    -10.0,
+    -7.5,
+    -5.0,
+    -2.5,
+    0.0,
+    2.5,
+    5.0,
+    7.5,
+    10.0,
+    12.5,
+    15.0
+  ],
+  "expected_snr_repetitions": 1,
+  "snr_coverage_valid": true,
+  "unique_artifact_ids": true,
+  "valid": true,
+  "manifests": [
+    {
+      "path": "final-assets/3gpp-umi/melgar2022/melgar-model2/n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr0-h64-seed42/manifest.json",
+      "manifest_sha256": "a961b4a20c3bccc15f3202597bf376e3871056ddb4cd3b48d8e78ce2c161eb21",
+      "artifact_id": "n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr0-h64-seed42",
+      "training_snr_dbs": [
+        0.0
+      ],
+      "generation_recipe": {
+        "optimizer": "rmsprop",
+        "loss": "mse",
+        "learning_rate": 7.02e-05,
+        "optimizer_batch_size": 256,
+        "train_batches": 800,
+        "train_batch_size": 8,
+        "validation_batches": 32,
+        "validation_batch_size": 8,
+        "epochs": 200,
+        "min_train_seconds": 0.0,
+        "patience_epochs": 20,
+        "min_delta": 0.0001,
+        "seed": 42,
+        "validation_seed": 100045,
+        "training_snr_dbs": [
+          0.0
+        ]
+      },
+      "best_epoch": 127,
+      "stopped_epoch": 147,
+      "elapsed_seconds": 1913.7197070121765,
+      "best_training_metric": 0.011644618877997765,
+      "best_validation_metric": 0.013632764418919882,
+      "train_channels": 6400,
+      "validation_channels": 256,
+      "training_data_manifest": {
+        "asset_type": "melgar-model2-training-data",
+        "artifact_id": "train6400-val256-snrm10-m7p5-m5-m2p5-0-2p5-5-7p5-10-12p5-15-n156-capall-seed42",
+        "sha256": "ea6883bee8506a7d3b0c75036547c38017fd3ffc145fc91ef71287d32f28b727"
+      },
+      "payloads": [
+        {
+          "path": "final-assets/3gpp-umi/melgar2022/melgar-model2/n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr0-h64-seed42/dnn_params.npz",
+          "size_bytes": 3509938,
+          "sha256": "543a7bdd6ed8b2ab748e7f8beb5ebc2edb059a57282f2ad213c664413700f97a",
+          "array_count": 16,
+          "finite_array_count": 16
+        }
+      ],
+      "valid": true,
+      "errors": []
+    },
+    {
+      "path": "final-assets/3gpp-umi/melgar2022/melgar-model2/n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr10-h64-seed42/manifest.json",
+      "manifest_sha256": "637c60cd8d6bab8005c1ad1eafe4b209574b1ccb7cbc746ec2ea47fad807fdd8",
+      "artifact_id": "n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr10-h64-seed42",
+      "training_snr_dbs": [
+        10.0
+      ],
+      "generation_recipe": {
+        "optimizer": "rmsprop",
+        "loss": "mse",
+        "learning_rate": 7.02e-05,
+        "optimizer_batch_size": 256,
+        "train_batches": 800,
+        "train_batch_size": 8,
+        "validation_batches": 32,
+        "validation_batch_size": 8,
+        "epochs": 200,
+        "min_train_seconds": 0.0,
+        "patience_epochs": 20,
+        "min_delta": 0.0001,
+        "seed": 42,
+        "validation_seed": 100045,
+        "training_snr_dbs": [
+          10.0
+        ]
+      },
+      "best_epoch": 149,
+      "stopped_epoch": 169,
+      "elapsed_seconds": 1880.8373107910156,
+      "best_training_metric": 0.004582306866844495,
+      "best_validation_metric": 0.005799490385330641,
+      "train_channels": 6400,
+      "validation_channels": 256,
+      "training_data_manifest": {
+        "asset_type": "melgar-model2-training-data",
+        "artifact_id": "train6400-val256-snrm10-m7p5-m5-m2p5-0-2p5-5-7p5-10-12p5-15-n156-capall-seed42",
+        "sha256": "ea6883bee8506a7d3b0c75036547c38017fd3ffc145fc91ef71287d32f28b727"
+      },
+      "payloads": [
+        {
+          "path": "final-assets/3gpp-umi/melgar2022/melgar-model2/n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr10-h64-seed42/dnn_params.npz",
+          "size_bytes": 3509938,
+          "sha256": "e96bc9b6238262ef1237870bbf726546617be226e0ae620d040a3608ce2667cc",
+          "array_count": 16,
+          "finite_array_count": 16
+        }
+      ],
+      "valid": true,
+      "errors": []
+    },
+    {
+      "path": "final-assets/3gpp-umi/melgar2022/melgar-model2/n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr12p5-h64-seed42/manifest.json",
+      "manifest_sha256": "64cdee527d393b0dd659b7ac4ddbd2545d4860c91294d951be5413c96d86aa6d",
+      "artifact_id": "n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr12p5-h64-seed42",
+      "training_snr_dbs": [
+        12.5
+      ],
+      "generation_recipe": {
+        "optimizer": "rmsprop",
+        "loss": "mse",
+        "learning_rate": 7.02e-05,
+        "optimizer_batch_size": 256,
+        "train_batches": 800,
+        "train_batch_size": 8,
+        "validation_batches": 32,
+        "validation_batch_size": 8,
+        "epochs": 200,
+        "min_train_seconds": 0.0,
+        "patience_epochs": 20,
+        "min_delta": 0.0001,
+        "seed": 42,
+        "validation_seed": 100045,
+        "training_snr_dbs": [
+          12.5
+        ]
+      },
+      "best_epoch": 196,
+      "stopped_epoch": 200,
+      "elapsed_seconds": 2155.1432676315308,
+      "best_training_metric": 0.004545686235412573,
+      "best_validation_metric": 0.005969590579087918,
+      "train_channels": 6400,
+      "validation_channels": 256,
+      "training_data_manifest": {
+        "asset_type": "melgar-model2-training-data",
+        "artifact_id": "train6400-val256-snrm10-m7p5-m5-m2p5-0-2p5-5-7p5-10-12p5-15-n156-capall-seed42",
+        "sha256": "ea6883bee8506a7d3b0c75036547c38017fd3ffc145fc91ef71287d32f28b727"
+      },
+      "payloads": [
+        {
+          "path": "final-assets/3gpp-umi/melgar2022/melgar-model2/n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr12p5-h64-seed42/dnn_params.npz",
+          "size_bytes": 3509938,
+          "sha256": "3b893b1e0bb10fe352147e4899892908aeb6a7750f3135f4f0e842a5bf2d07de",
+          "array_count": 16,
+          "finite_array_count": 16
+        }
+      ],
+      "valid": true,
+      "errors": []
+    },
+    {
+      "path": "final-assets/3gpp-umi/melgar2022/melgar-model2/n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr15-h64-seed42/manifest.json",
+      "manifest_sha256": "181a8b02f74669c008d64fa0b80ca167c1acc910687844f33bc97697c51f16a9",
+      "artifact_id": "n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr15-h64-seed42",
+      "training_snr_dbs": [
+        15.0
+      ],
+      "generation_recipe": {
+        "optimizer": "rmsprop",
+        "loss": "mse",
+        "learning_rate": 7.02e-05,
+        "optimizer_batch_size": 256,
+        "train_batches": 800,
+        "train_batch_size": 8,
+        "validation_batches": 32,
+        "validation_batch_size": 8,
+        "epochs": 200,
+        "min_train_seconds": 0.0,
+        "patience_epochs": 20,
+        "min_delta": 0.0001,
+        "seed": 42,
+        "validation_seed": 100045,
+        "training_snr_dbs": [
+          15.0
+        ]
+      },
+      "best_epoch": 196,
+      "stopped_epoch": 200,
+      "elapsed_seconds": 2154.089919090271,
+      "best_training_metric": 0.0032749527224745505,
+      "best_validation_metric": 0.004301049101811189,
+      "train_channels": 6400,
+      "validation_channels": 256,
+      "training_data_manifest": {
+        "asset_type": "melgar-model2-training-data",
+        "artifact_id": "train6400-val256-snrm10-m7p5-m5-m2p5-0-2p5-5-7p5-10-12p5-15-n156-capall-seed42",
+        "sha256": "ea6883bee8506a7d3b0c75036547c38017fd3ffc145fc91ef71287d32f28b727"
+      },
+      "payloads": [
+        {
+          "path": "final-assets/3gpp-umi/melgar2022/melgar-model2/n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr15-h64-seed42/dnn_params.npz",
+          "size_bytes": 3509938,
+          "sha256": "1fc7b390302143634b39663f1f299c41f8e7b97a69ab1dd80d2fb23b00e7bd93",
+          "array_count": 16,
+          "finite_array_count": 16
+        }
+      ],
+      "valid": true,
+      "errors": []
+    },
+    {
+      "path": "final-assets/3gpp-umi/melgar2022/melgar-model2/n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr2p5-h64-seed42/manifest.json",
+      "manifest_sha256": "fc5ddfc92f4869eb4ffc7955594d99e1907c0056e60b2e23977ea58b39da2ab6",
+      "artifact_id": "n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr2p5-h64-seed42",
+      "training_snr_dbs": [
+        2.5
+      ],
+      "generation_recipe": {
+        "optimizer": "rmsprop",
+        "loss": "mse",
+        "learning_rate": 7.02e-05,
+        "optimizer_batch_size": 256,
+        "train_batches": 800,
+        "train_batch_size": 8,
+        "validation_batches": 32,
+        "validation_batch_size": 8,
+        "epochs": 200,
+        "min_train_seconds": 0.0,
+        "patience_epochs": 20,
+        "min_delta": 0.0001,
+        "seed": 42,
+        "validation_seed": 100045,
+        "training_snr_dbs": [
+          2.5
+        ]
+      },
+      "best_epoch": 149,
+      "stopped_epoch": 169,
+      "elapsed_seconds": 2457.811584711075,
+      "best_training_metric": 0.00807706627708215,
+      "best_validation_metric": 0.009700923202893673,
+      "train_channels": 6400,
+      "validation_channels": 256,
+      "training_data_manifest": {
+        "asset_type": "melgar-model2-training-data",
+        "artifact_id": "train6400-val256-snrm10-m7p5-m5-m2p5-0-2p5-5-7p5-10-12p5-15-n156-capall-seed42",
+        "sha256": "ea6883bee8506a7d3b0c75036547c38017fd3ffc145fc91ef71287d32f28b727"
+      },
+      "payloads": [
+        {
+          "path": "final-assets/3gpp-umi/melgar2022/melgar-model2/n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr2p5-h64-seed42/dnn_params.npz",
+          "size_bytes": 3509938,
+          "sha256": "2c4c1a8ad7fda092df35fd966e65722b921961acd90564d21fbb69a0e127f58a",
+          "array_count": 16,
+          "finite_array_count": 16
+        }
+      ],
+      "valid": true,
+      "errors": []
+    },
+    {
+      "path": "final-assets/3gpp-umi/melgar2022/melgar-model2/n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr5-h64-seed42/manifest.json",
+      "manifest_sha256": "17e4e09970594975f8f9ad96e8e162e5198439d88cc33c59d806af98472035be",
+      "artifact_id": "n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr5-h64-seed42",
+      "training_snr_dbs": [
+        5.0
+      ],
+      "generation_recipe": {
+        "optimizer": "rmsprop",
+        "loss": "mse",
+        "learning_rate": 7.02e-05,
+        "optimizer_batch_size": 256,
+        "train_batches": 800,
+        "train_batch_size": 8,
+        "validation_batches": 32,
+        "validation_batch_size": 8,
+        "epochs": 200,
+        "min_train_seconds": 0.0,
+        "patience_epochs": 20,
+        "min_delta": 0.0001,
+        "seed": 42,
+        "validation_seed": 100045,
+        "training_snr_dbs": [
+          5.0
+        ]
+      },
+      "best_epoch": 99,
+      "stopped_epoch": 119,
+      "elapsed_seconds": 1744.3716292381287,
+      "best_training_metric": 0.0072558772563934325,
+      "best_validation_metric": 0.008808265320765667,
+      "train_channels": 6400,
+      "validation_channels": 256,
+      "training_data_manifest": {
+        "asset_type": "melgar-model2-training-data",
+        "artifact_id": "train6400-val256-snrm10-m7p5-m5-m2p5-0-2p5-5-7p5-10-12p5-15-n156-capall-seed42",
+        "sha256": "ea6883bee8506a7d3b0c75036547c38017fd3ffc145fc91ef71287d32f28b727"
+      },
+      "payloads": [
+        {
+          "path": "final-assets/3gpp-umi/melgar2022/melgar-model2/n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr5-h64-seed42/dnn_params.npz",
+          "size_bytes": 3509938,
+          "sha256": "53fc5194bf08badc460434253bf1704ea516efb38b096bd75f767d42e30a7b01",
+          "array_count": 16,
+          "finite_array_count": 16
+        }
+      ],
+      "valid": true,
+      "errors": []
+    },
+    {
+      "path": "final-assets/3gpp-umi/melgar2022/melgar-model2/n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr7p5-h64-seed42/manifest.json",
+      "manifest_sha256": "6dd8228da077949806370b99484c425fb50b614f9e4868b8f1e59555a0878af5",
+      "artifact_id": "n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr7p5-h64-seed42",
+      "training_snr_dbs": [
+        7.5
+      ],
+      "generation_recipe": {
+        "optimizer": "rmsprop",
+        "loss": "mse",
+        "learning_rate": 7.02e-05,
+        "optimizer_batch_size": 256,
+        "train_batches": 800,
+        "train_batch_size": 8,
+        "validation_batches": 32,
+        "validation_batch_size": 8,
+        "epochs": 200,
+        "min_train_seconds": 0.0,
+        "patience_epochs": 20,
+        "min_delta": 0.0001,
+        "seed": 42,
+        "validation_seed": 100045,
+        "training_snr_dbs": [
+          7.5
+        ]
+      },
+      "best_epoch": 196,
+      "stopped_epoch": 200,
+      "elapsed_seconds": 2623.7842967510223,
+      "best_training_metric": 0.0053184360571396656,
+      "best_validation_metric": 0.006693701713513105,
+      "train_channels": 6400,
+      "validation_channels": 256,
+      "training_data_manifest": {
+        "asset_type": "melgar-model2-training-data",
+        "artifact_id": "train6400-val256-snrm10-m7p5-m5-m2p5-0-2p5-5-7p5-10-12p5-15-n156-capall-seed42",
+        "sha256": "ea6883bee8506a7d3b0c75036547c38017fd3ffc145fc91ef71287d32f28b727"
+      },
+      "payloads": [
+        {
+          "path": "final-assets/3gpp-umi/melgar2022/melgar-model2/n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnr7p5-h64-seed42/dnn_params.npz",
+          "size_bytes": 3509938,
+          "sha256": "66ac33dbd545601a54f874fb6371cc78b26c0789316aa239ae8e9b534fea653e",
+          "array_count": 16,
+          "finite_array_count": 16
+        }
+      ],
+      "valid": true,
+      "errors": []
+    },
+    {
+      "path": "final-assets/3gpp-umi/melgar2022/melgar-model2/n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnrm10-h64-seed42/manifest.json",
+      "manifest_sha256": "dbd7efe9e9bb8a8d77d15c76ff4083bfdf948a2b438545f735e3134495ecb7ff",
+      "artifact_id": "n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnrm10-h64-seed42",
+      "training_snr_dbs": [
+        -10.0
+      ],
+      "generation_recipe": {
+        "optimizer": "rmsprop",
+        "loss": "mse",
+        "learning_rate": 7.02e-05,
+        "optimizer_batch_size": 256,
+        "train_batches": 800,
+        "train_batch_size": 8,
+        "validation_batches": 32,
+        "validation_batch_size": 8,
+        "epochs": 200,
+        "min_train_seconds": 0.0,
+        "patience_epochs": 20,
+        "min_delta": 0.0001,
+        "seed": 42,
+        "validation_seed": 100045,
+        "training_snr_dbs": [
+          -10.0
+        ]
+      },
+      "best_epoch": 115,
+      "stopped_epoch": 135,
+      "elapsed_seconds": 1976.5589299201965,
+      "best_training_metric": 0.05196052086658967,
+      "best_validation_metric": 0.058013304685935,
+      "train_channels": 6400,
+      "validation_channels": 256,
+      "training_data_manifest": {
+        "asset_type": "melgar-model2-training-data",
+        "artifact_id": "train6400-val256-snrm10-m7p5-m5-m2p5-0-2p5-5-7p5-10-12p5-15-n156-capall-seed42",
+        "sha256": "ea6883bee8506a7d3b0c75036547c38017fd3ffc145fc91ef71287d32f28b727"
+      },
+      "payloads": [
+        {
+          "path": "final-assets/3gpp-umi/melgar2022/melgar-model2/n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnrm10-h64-seed42/dnn_params.npz",
+          "size_bytes": 3509938,
+          "sha256": "c8b2bad98ba2d610ed487d850e683d135791a389ba2f3f76d62a8f6baa2b6740",
+          "array_count": 16,
+          "finite_array_count": 16
+        }
+      ],
+      "valid": true,
+      "errors": []
+    },
+    {
+      "path": "final-assets/3gpp-umi/melgar2022/melgar-model2/n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnrm2p5-h64-seed42/manifest.json",
+      "manifest_sha256": "e4da507fe8c97a0a3d0f82466f6c040bede551cf8b6b65eabaec21ac0d8aa2b3",
+      "artifact_id": "n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnrm2p5-h64-seed42",
+      "training_snr_dbs": [
+        -2.5
+      ],
+      "generation_recipe": {
+        "optimizer": "rmsprop",
+        "loss": "mse",
+        "learning_rate": 7.02e-05,
+        "optimizer_batch_size": 256,
+        "train_batches": 800,
+        "train_batch_size": 8,
+        "validation_batches": 32,
+        "validation_batch_size": 8,
+        "epochs": 200,
+        "min_train_seconds": 0.0,
+        "patience_epochs": 20,
+        "min_delta": 0.0001,
+        "seed": 42,
+        "validation_seed": 100045,
+        "training_snr_dbs": [
+          -2.5
+        ]
+      },
+      "best_epoch": 124,
+      "stopped_epoch": 144,
+      "elapsed_seconds": 2108.2279522418976,
+      "best_training_metric": 0.015938187975149887,
+      "best_validation_metric": 0.018214236085231487,
+      "train_channels": 6400,
+      "validation_channels": 256,
+      "training_data_manifest": {
+        "asset_type": "melgar-model2-training-data",
+        "artifact_id": "train6400-val256-snrm10-m7p5-m5-m2p5-0-2p5-5-7p5-10-12p5-15-n156-capall-seed42",
+        "sha256": "ea6883bee8506a7d3b0c75036547c38017fd3ffc145fc91ef71287d32f28b727"
+      },
+      "payloads": [
+        {
+          "path": "final-assets/3gpp-umi/melgar2022/melgar-model2/n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnrm2p5-h64-seed42/dnn_params.npz",
+          "size_bytes": 3509938,
+          "sha256": "a39330cae9e3e51bea7806ce9bdf6e82e95bb00a4cc1d795002ae1777f8f1245",
+          "array_count": 16,
+          "finite_array_count": 16
+        }
+      ],
+      "valid": true,
+      "errors": []
+    },
+    {
+      "path": "final-assets/3gpp-umi/melgar2022/melgar-model2/n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnrm5-h64-seed42/manifest.json",
+      "manifest_sha256": "27f74dd4799f66974be5a15cd03e95704a5f817901b66406164dcc891311d172",
+      "artifact_id": "n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnrm5-h64-seed42",
+      "training_snr_dbs": [
+        -5.0
+      ],
+      "generation_recipe": {
+        "optimizer": "rmsprop",
+        "loss": "mse",
+        "learning_rate": 7.02e-05,
+        "optimizer_batch_size": 256,
+        "train_batches": 800,
+        "train_batch_size": 8,
+        "validation_batches": 32,
+        "validation_batch_size": 8,
+        "epochs": 200,
+        "min_train_seconds": 0.0,
+        "patience_epochs": 20,
+        "min_delta": 0.0001,
+        "seed": 42,
+        "validation_seed": 100045,
+        "training_snr_dbs": [
+          -5.0
+        ]
+      },
+      "best_epoch": 86,
+      "stopped_epoch": 106,
+      "elapsed_seconds": 1515.7039668560028,
+      "best_training_metric": 0.024028721635158245,
+      "best_validation_metric": 0.026436124474574357,
+      "train_channels": 6400,
+      "validation_channels": 256,
+      "training_data_manifest": {
+        "asset_type": "melgar-model2-training-data",
+        "artifact_id": "train6400-val256-snrm10-m7p5-m5-m2p5-0-2p5-5-7p5-10-12p5-15-n156-capall-seed42",
+        "sha256": "ea6883bee8506a7d3b0c75036547c38017fd3ffc145fc91ef71287d32f28b727"
+      },
+      "payloads": [
+        {
+          "path": "final-assets/3gpp-umi/melgar2022/melgar-model2/n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnrm5-h64-seed42/dnn_params.npz",
+          "size_bytes": 3509938,
+          "sha256": "190df855cfa7e77d0cd300404ecce1d487c70c2ae0771d65932e301478a5a126",
+          "array_count": 16,
+          "finite_array_count": 16
+        }
+      ],
+      "valid": true,
+      "errors": []
+    },
+    {
+      "path": "final-assets/3gpp-umi/melgar2022/melgar-model2/n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnrm7p5-h64-seed42/manifest.json",
+      "manifest_sha256": "a68e0d8bb315cd6bab064abd3304ed97a2cae0551641ff758ac3df6896a52353",
+      "artifact_id": "n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnrm7p5-h64-seed42",
+      "training_snr_dbs": [
+        -7.5
+      ],
+      "generation_recipe": {
+        "optimizer": "rmsprop",
+        "loss": "mse",
+        "learning_rate": 7.02e-05,
+        "optimizer_batch_size": 256,
+        "train_batches": 800,
+        "train_batch_size": 8,
+        "validation_batches": 32,
+        "validation_batch_size": 8,
+        "epochs": 200,
+        "min_train_seconds": 0.0,
+        "patience_epochs": 20,
+        "min_delta": 0.0001,
+        "seed": 42,
+        "validation_seed": 100045,
+        "training_snr_dbs": [
+          -7.5
+        ]
+      },
+      "best_epoch": 124,
+      "stopped_epoch": 144,
+      "elapsed_seconds": 1797.4159348011017,
+      "best_training_metric": 0.03460658703094874,
+      "best_validation_metric": 0.03844169699228727,
+      "train_channels": 6400,
+      "validation_channels": 256,
+      "training_data_manifest": {
+        "asset_type": "melgar-model2-training-data",
+        "artifact_id": "train6400-val256-snrm10-m7p5-m5-m2p5-0-2p5-5-7p5-10-12p5-15-n156-capall-seed42",
+        "sha256": "ea6883bee8506a7d3b0c75036547c38017fd3ffc145fc91ef71287d32f28b727"
+      },
+      "payloads": [
+        {
+          "path": "final-assets/3gpp-umi/melgar2022/melgar-model2/n156-tb800-bs8-vb32-vbs8-ep200-mb256-lr7p02e-05-mins0-pat20-md0p0001-trsnrm7p5-h64-seed42/dnn_params.npz",
+          "size_bytes": 3509938,
+          "sha256": "8b888a8b3d052de25a42699c8eb2be9be3117290934e706bc1bc4b4d7d959f83",
+          "array_count": 16,
+          "finite_array_count": 16
+        }
+      ],
+      "valid": true,
+      "errors": []
+    }
+  ]
+}

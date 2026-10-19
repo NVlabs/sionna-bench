@@ -1,0 +1,49 @@
+{
+  "results_schema_version": 1,
+  "scenario_id": "3gpp-umi",
+  "config_fingerprint": "4f774132bba964e4d31fe64a10374b020db5abd5c13a5e564b4e62bf258a4efc",
+  "results": {
+    "LSCombEstimator (second-order)": {
+      "file": "LSCombEstimator (second-order).npz",
+      "estimator_class": "sionna.bench.mimo_ofdm_chest.papers.coleri2002.estimator.LSCombEstimator",
+      "constructor_arguments": {
+        "err_var_scale": 0.868,
+        "method": "second-order"
+      },
+      "assets": [],
+      "updated_at": "2026-10-10 17:11:54"
+    },
+    "LSCombEstimator (low-pass)": {
+      "file": "LSCombEstimator (low-pass).npz",
+      "estimator_class": "sionna.bench.mimo_ofdm_chest.papers.coleri2002.estimator.LSCombEstimator",
+      "constructor_arguments": {
+        "err_var_scale": 0.868,
+        "lowpass_cutoff": 0.105,
+        "lowpass_filter_half_length": 16,
+        "method": "low-pass"
+      },
+      "assets": [],
+      "updated_at": "2026-10-10 17:12:35"
+    },
+    "LSCombEstimator (cubic spline)": {
+      "file": "LSCombEstimator (cubic spline).npz",
+      "estimator_class": "sionna.bench.mimo_ofdm_chest.papers.coleri2002.estimator.LSCombEstimator",
+      "constructor_arguments": {
+        "err_var_scale": 0.868,
+        "method": "cubic-spline"
+      },
+      "assets": [],
+      "updated_at": "2026-10-10 17:13:14"
+    },
+    "LSCombEstimator (time-domain)": {
+      "file": "LSCombEstimator (time-domain).npz",
+      "estimator_class": "sionna.bench.mimo_ofdm_chest.papers.coleri2002.estimator.LSCombEstimator",
+      "constructor_arguments": {
+        "err_var_scale": 0.868,
+        "method": "time-domain"
+      },
+      "assets": [],
+      "updated_at": "2026-10-10 17:13:54"
+    }
+  }
+}
