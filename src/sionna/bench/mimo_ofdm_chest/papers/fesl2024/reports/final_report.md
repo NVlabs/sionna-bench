@@ -172,10 +172,19 @@ Only five Python modules, README and five required Markdown reports belong in
 the submission. Generated payloads/tests/PDF/bytecode and shared edits are
 excluded. Python headers identify Benedikt Fesl and Apache-2.0; DCO sign-off
 remains the human's action. No Git publication is authorized.
-The complete 48-file predecessor was hash-verified in
-`/Users/bene/projects/channel-estimation/fesl2024-finalization-v1/paper_after_cleanup/`
-against the sibling `final_hashes.json` manifest. Archived reports, raw external
+The complete 48-file predecessor was hash-verified in the authors' external
+`fesl2024-finalization-v1/paper_after_cleanup/` archive against the sibling
+`final_hashes.json` manifest. Archived reports, raw external
 experiment roots, test source/logs and executed sources preserve the audit trail.
 
 **Final verdict: accepted with caveats; no blocking implementation finding.
 Official registration/inventories/distribution remain maintainer follow-up.**
+
+## Maintainer Changes After Review (2026-11-11)
+
+The maintainers regenerated the canonical asset with the reviewed recipe on
+CUDA, recalibrated the detector-facing scale to `0.0358`, and tracked the
+canonical results; the authors' training study was accepted as reported. The
+verdict above refers to the authors' submission and is unchanged. Details are
+in the maintainer addendum of
+[implementation_report.md](implementation_report.md).

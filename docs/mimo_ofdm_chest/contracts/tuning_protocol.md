@@ -8,6 +8,18 @@ The purpose of the protocol is to give every method a transparent and serious
 but bounded optimization effort, remove arbitrary differences in channel
 counts, and keep final benchmark outputs outside the parameter-selection loop.
 
+## Contributed Methods
+
+This protocol binds the studies that the maintainers run when they reimplement
+a method from the literature. When the authors of a method contribute its
+implementation themselves, the hyperparameters they selected with their own
+methodology are accepted as reported and are not reproduced by the
+maintainers. The maintainers independently regenerate any required assets and
+the canonical benchmark results with those hyperparameters, and the paper
+README states which values are author-selected. The Fesl 2024 diffusion
+estimator is the first such entry; its optimizer recipe is author-selected and
+does not appear in the algorithm study table below.
+
 ## Preliminary Feasibility Probe
 
 Before freezing and starting a canonical algorithmic study, the implementer

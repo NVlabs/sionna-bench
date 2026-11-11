@@ -108,28 +108,20 @@ def run_benchmark(
     smoke: bool = False,
     interpolation_type: Optional[str] = None,
     err_var_scale: Optional[float] = None,
-    asset_purpose: Optional[str] = None,
 ) -> dict[str, Any]:
     """Strictly load a matching prior and evaluate through the shared pipeline.
 
-    ``asset_purpose`` permits an explicit single-reference evaluation without
-    changing the original manifest. Omit it for normal canonical/smoke loading.
-    It does not authorize preparation or publication. The variance multiplier
-    defaults to the estimator constructor, the single source of truth.
+    Smoke evaluation loads smoke-purpose assets; otherwise canonical-purpose
+    assets are required. The variance multiplier defaults to the estimator
+    constructor, the single source of truth.
     """
-    if asset_purpose is not None and (
-        smoke or asset_purpose not in ("canonical", "single-reference")
-    ):
-        raise ValueError(
-            "Explicit asset purpose is for canonical-configuration evaluation only."
-        )
     resource_grid = build_resource_grid(cfg)
     state, power, manifest = load_model(
         resource_grid,
         cfg,
         asset_root=asset_root,
         artifact_id=artifact_id or ("smoke" if smoke else "canonical"),
-        expected_purpose=asset_purpose or ("smoke" if smoke else "canonical"),
+        expected_purpose="smoke" if smoke else "canonical",
     )
     arguments: dict[str, Any] = {
         "receive_array_shape": (cfg.bs_num_rows, cfg.bs_num_cols)
@@ -169,11 +161,6 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument("--smoke", action="store_true")
     parser.add_argument("--asset-root", type=Path)
     parser.add_argument("--artifact-id")
-    parser.add_argument(
-        "--asset-purpose",
-        choices=("canonical", "single-reference"),
-        help="Explicit evaluation-only asset purpose; does not relabel or promote an asset.",
-    )
     parser.add_argument("--training-data-manifest", type=Path)
     parser.add_argument("--overwrite-assets", action="store_true")
     parser.add_argument("--device")
@@ -206,8 +193,6 @@ def main() -> None:
         torch.set_num_threads(args.torch_threads)
     cfg = _system_config_from_args(args)
     if args.prepare_assets:
-        if args.asset_purpose is not None:
-            raise ValueError("--asset-purpose is evaluation-only.")
         if args.asset_root is None:
             raise ValueError(
                 "--prepare-assets requires an explicit external --asset-root."
@@ -243,7 +228,6 @@ def main() -> None:
         smoke=args.smoke,
         interpolation_type=args.interpolation_type,
         err_var_scale=args.err_var_scale,
-        asset_purpose=args.asset_purpose,
     )
 
 

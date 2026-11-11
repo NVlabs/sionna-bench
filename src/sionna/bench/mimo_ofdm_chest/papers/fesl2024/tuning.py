@@ -1,11 +1,5 @@
 # SPDX-FileCopyrightText: Copyright (c) 2026 Benedikt Fesl
 # SPDX-License-Identifier: Apache-2.0
-"""Separate feasibility measurements and explicit full-study entry points.
-
-The feasibility study uses only 64/16/16 development realizations. Full data
-generation/training, paired selection and variance calibration are distinct
-explicit commands and require the human approvals recorded in the plan.
-"""
 
 from __future__ import annotations
 
@@ -36,6 +30,7 @@ from sionna.bench.mimo_ofdm_chest.benchmarking import (
     tune_channel_estimator,
 )
 from sionna.bench.mimo_ofdm_chest.benchmarking.result_store import (
+    resolve_callable_arguments,
     resolve_constructor_arguments,
 )
 from sionna.bench.mimo_ofdm_chest.configs import SystemConfig, umi_3gpp_config
@@ -55,12 +50,7 @@ from .estimator import (
     _NoisePredictionCNN,
 )
 
-__all__ = [
-    "run_tuning",
-    "run_feasibility",
-    "validate_training_recipe",
-    "validate_variance_scale",
-]
+__all__ = ["run_tuning"]
 
 
 def _inference_arguments(
@@ -421,21 +411,62 @@ def run_tuning(
     artifact_id: str = "canonical",
     timeout: Optional[float] = None,
     max_failed_trials: int = 0,
-    asset_purpose: Optional[str] = None,
 ) -> Any:
-    """Execute an explicitly approved training or frozen-asset variance study.
+    r"""
 
-    Full studies must follow the separate human resource-approval gate.
-    This entry point never generates a training dataset implicitly.
-    ``asset_purpose`` is an explicit strict-loading override for frozen-model
-    variance calibration only; it does not relabel or generate an asset.
+    .. rubric:: Training Hyperparameter Tuning
+
+    The ``"training"`` study minimizes weighted NMSE at -10, -5, 0, 5, and
+    10 dB. It runs 10 seeded TPE trials, the first of which uses the training
+    defaults of ``train_model()``. Every trial trains one diffusion model that
+    serves all SNRs and evaluates three batches of four channels at each SNR.
+
+    All trials reuse the same training-data bank of 6,400 training and 256
+    validation channels, at most 200 epochs, patience of 20 epochs, and a
+    relative minimum validation improvement of 1e-4. The best checkpoint is
+    restored.
+
+    .. list-table::
+        :header-rows: 1
+
+        * - Parameter
+          - Search space
+        * - ``learning_rate``
+          - logarithmic from 1e-5 through 1e-3
+        * - ``optimizer_batch_size``
+          - categorical set {128, 256, 512, 1024, 2048}
+
+    ``validate_training_recipe()`` compares the rounded winner with the training
+    defaults using 63 batches of four channels at each SNR.
+
+    This study is the contributing authors' tooling. The canonical recipe was
+    selected by the authors in their own external study and was not reproduced
+    by the maintainers; see the paper README.
+
+    .. rubric:: Error-Variance Calibration
+
+    The ``"variance"`` study tunes ``err_var_scale`` logarithmically from
+    1e-3 through 1 using 10 TPE trials. Codeword BLER is evaluated at 10 dB
+    over 63 batches of four channels using the frozen canonical model.
+    ``validate_variance_scale()`` compares the rounded winner with the existing
+    scale.
+
+    :param cfg: System configuration of the canonical benchmark.
+    :param asset_root: External root containing the training data and receiving
+        the trial model assets.
+    :param output_dir: Directory for the Optuna study database, the frozen study
+        context, and the study summary.
+    :param study: Study to execute: ``"training"`` or ``"variance"``.
+    :param training_data_manifest: Manifest of the fixed training-data bank.
+        Required by the training study.
+    :param artifact_id: Identifier of the frozen model asset calibrated by the
+        variance study.
+    :param timeout: Soft time limit in seconds for this invocation, checked
+        between trials. A partial study is continued by calling again.
+    :param max_failed_trials: Number of failed trials tolerated before the study
+        stops. The default of zero stops at the first failure.
+    :returns: The completed Optuna study.
     """
-    if asset_purpose is not None and (
-        study != "variance" or asset_purpose not in ("canonical", "single-reference")
-    ):
-        raise ValueError(
-            "Explicit asset purpose is allowed only for frozen-model variance calibration."
-        )
     rg = build_resource_grid(cfg)
     output = Path(output_dir)
     if study == "training":
@@ -511,7 +542,11 @@ def run_tuning(
             batch_size=4,
             sampler_seed=24300000,
             probe_seed=24310000,
-            enqueued_trials=[{"learning_rate": 1e-4, "optimizer_batch_size": 128}],
+            enqueued_trials=[
+                resolve_callable_arguments(
+                    train_model, ("learning_rate", "optimizer_batch_size")
+                )
+            ],
             estimator_objective=objective,
         )
     if study == "variance":
@@ -520,7 +555,7 @@ def run_tuning(
             cfg,
             asset_root=asset_root,
             artifact_id=artifact_id,
-            expected_purpose=asset_purpose or "canonical",
+            expected_purpose="canonical",
         )
         _check_context(
             output,
@@ -631,10 +666,11 @@ def validate_training_recipe(
             raise ValueError(
                 "Trial checkpoints do not share the supplied immutable training dataset."
             )
+    reference_recipe = resolve_callable_arguments(
+        train_model, ("learning_rate", "optimizer_batch_size")
+    )
     reference = next(
-        trial
-        for trial in completed
-        if trial.params == {"learning_rate": 1e-4, "optimizer_batch_size": 128}
+        trial for trial in completed if trial.params == reference_recipe
     )
     rounded = {
         "learning_rate": float(f"{study.best_params['learning_rate']:.3g}"),
@@ -722,22 +758,15 @@ def validate_variance_scale(
     asset_root: str | Path,
     output_dir: str | Path,
     artifact_id: str,
-    asset_purpose: Optional[str] = None,
 ) -> dict[str, Any]:
     """Validate a rounded scale against the constructor default on paired data.
 
-    ``asset_purpose`` forwards an explicit purpose to the strict public loader;
-    it never authorizes training or asset relabeling. A completed study is bound
+    The frozen canonical model is loaded strictly. A completed study is bound
     to its original source context, so old records must be inspected with their
     frozen source snapshot after the selected constructor default is adopted.
     """
     import optuna
 
-    if asset_purpose is not None and asset_purpose not in (
-        "canonical",
-        "single-reference",
-    ):
-        raise ValueError("Unsupported variance-validation asset purpose.")
     output = Path(output_dir)
     summary = json.loads((output / "best_params.json").read_text())
     study = optuna.load_study(
@@ -759,7 +788,7 @@ def validate_variance_scale(
         cfg,
         asset_root=asset_root,
         artifact_id=artifact_id,
-        expected_purpose=asset_purpose or "canonical",
+        expected_purpose="canonical",
     )
     _check_context(
         output,
@@ -819,9 +848,8 @@ def main() -> None:
     parser.add_argument("--prepare-training-data", action="store_true")
     parser.add_argument("--training-data-manifest", type=Path)
     parser.add_argument("--asset-root", type=Path, required=True)
-    parser.add_argument("--output-dir", type=Path, default=Path("/tmp/fesl2024-study"))
+    parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--artifact-id", default="canonical")
-    parser.add_argument("--asset-purpose", choices=("canonical", "single-reference"))
     parser.add_argument("--device", default="cpu")
     parser.add_argument("--torch-threads", type=int)
     parser.add_argument("--timeout", type=float)
@@ -830,11 +858,6 @@ def main() -> None:
     if args.torch_threads is not None:
         torch.set_num_threads(args.torch_threads)
     cfg = replace(umi_3gpp_config, device=args.device)
-    if args.asset_purpose is not None and (
-        args.prepare_training_data
-        or args.study not in ("variance", "variance-validation")
-    ):
-        parser.error("--asset-purpose is only for frozen variance studies.")
     if args.prepare_training_data:
         if args.study:
             parser.error("Data preparation and study execution are separate commands.")
@@ -867,7 +890,6 @@ def main() -> None:
                 asset_root=args.asset_root,
                 output_dir=args.output_dir,
                 artifact_id=args.artifact_id,
-                asset_purpose=args.asset_purpose,
             )
         )
     elif args.study:
@@ -880,7 +902,6 @@ def main() -> None:
             artifact_id=args.artifact_id,
             timeout=args.timeout,
             max_failed_trials=args.max_failed_trials,
-            asset_purpose=args.asset_purpose,
         )
     else:
         parser.error("Choose --prepare-training-data or --study.")

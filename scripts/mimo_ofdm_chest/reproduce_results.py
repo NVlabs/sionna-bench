@@ -25,6 +25,7 @@ _RUNS = (
     _Run("builtin", ("--estimator", "ls-nn,ls-lin,lmmse"), has_assets=True),
     _Run("coleri2002"),
     _Run("edfors1996", has_assets=True),
+    _Run("fesl2024", has_assets=True),
     _Run("koller2022", has_assets=True),
     _Run("delfeld2025"),
     _Run("lyu2026"),

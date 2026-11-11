@@ -10,6 +10,7 @@ if TYPE_CHECKING:
     from .mimo_ofdm_chest.papers.baur2022 import VAEChannelEstimator
     from .mimo_ofdm_chest.papers.coleri2002 import LSCombEstimator
     from .mimo_ofdm_chest.papers.edfors1996 import TruncatedChannelEstimator
+    from .mimo_ofdm_chest.papers.fesl2024 import DiffusionChannelEstimator
     from .mimo_ofdm_chest.papers.koller2022 import (
         SpatialGMMChannelEstimator,
         SpectralGMMChannelEstimator,
@@ -26,6 +27,7 @@ if TYPE_CHECKING:
 _ESTIMATOR_MODULES = {
     "DeepPriorChannelEstimator": ".mimo_ofdm_chest.papers.balevi2020",
     "DNNChannelEstimator": ".mimo_ofdm_chest.papers.melgar2022",
+    "DiffusionChannelEstimator": ".mimo_ofdm_chest.papers.fesl2024",
     "InterpolatedDNNChannelEstimator": ".mimo_ofdm_chest.papers.melgar2022",
     "LSCombEstimator": ".mimo_ofdm_chest.papers.coleri2002",
     "ReEsNetChannelEstimator": ".mimo_ofdm_chest.papers.li2020",

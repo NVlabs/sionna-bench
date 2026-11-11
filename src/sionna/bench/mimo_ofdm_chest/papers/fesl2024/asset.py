@@ -1,14 +1,7 @@
 # SPDX-FileCopyrightText: Copyright (c) 2026 Benedikt Fesl
 # SPDX-License-Identifier: Apache-2.0
-"""Explicit external data/training and strict schema-2 inference-asset loading.
+"""Dataset generation, training, and model assets for Fesl et al. 2024."""
 
-``diffusion-training-data`` contains complex64 ``train.npy`` and
-``validation.npy`` with shape [independent_realizations, active_REs, antennas],
-and float64 scalar ``channel_power`` in ``normalization.npz``.
-``diffusion-prior`` contains ``diffusion_params.npz``: ordered float32 CNN
-states, canonical float64 betas and the same training-only power scalar.
-Neither loader generates data or downloads/trains missing weights.
-"""
 
 from __future__ import annotations
 
@@ -199,12 +192,38 @@ def generate_training_data(
     purpose: str = "canonical",
     overwrite: bool = False,
 ) -> Path:
-    """Generate immutable clean spatial examples, once, below an external root.
+    r"""Generate and persist a deterministic bank of clean receive-array channels.
 
-    Counts refer to complete system realizations, not correlated UE/RE vectors.
-    Seed+batch address ranges for training and validation must be disjoint.
-    Each NPY file is one memory-mapped shard of its split. No evaluation SNR
-    or test channel is used to normalize the data.
+    The asset contains the clean channel vector at every active pilot resource
+    element of independent system-channel realizations, together with the
+    training-population channel power used for normalization. Training and
+    validation realizations use disjoint deterministic propagation seeds. The
+    completed asset is strictly validated before its manifest path is returned.
+
+    :param resource_grid: Sionna resource grid whose pilot geometry selects the
+        receive-array vectors retained from each channel realization.
+    :param cfg: System and channel configuration used to generate the channel
+        realizations.
+    :param asset_root: Writable external root beneath which the generated payloads
+        and manifest are stored.
+    :param artifact_id: Identifier of the generated dataset asset.
+    :param num_train_channels: Number of complete system-channel realizations in
+        the training split.
+    :param num_validation_channels: Number of complete system-channel
+        realizations in the validation split.
+    :param generation_batch_size: Number of realizations generated per batch.
+        Batch ``i`` of a split uses the propagation seed ``split_seed + i``.
+    :param train_seed: Base propagation seed of the training split.
+    :param validation_seed: Base propagation seed of the validation split. The
+        seed ranges of the two splits must not overlap.
+    :param purpose: Label recorded in the manifest that distinguishes canonical
+        data from smoke and development data. Loaders refuse data whose purpose
+        does not match the requested one.
+    :param overwrite: If `True`, replace an existing asset with the same identity.
+        If `False`, raise an error when that asset already exists.
+
+    :returns: Path to the strictly validated ``manifest.json`` of the generated
+        training-data asset.
     """
     for name, count in (
         ("train", num_train_channels),
@@ -703,7 +722,7 @@ def train_model(
     asset_root: str | Path,
     artifact_id: str = "canonical",
     epochs: int = 200,
-    optimizer_batch_size: int = 128,
+    optimizer_batch_size: int = 512,
     learning_rate: float = 1e-4,
     patience_epochs: int = 20,
     relative_min_delta: float = 1e-4,
@@ -715,11 +734,58 @@ def train_model(
     checkpoint_dir: Optional[str | Path] = None,
     resume: bool = False,
 ) -> tuple[dict[str, torch.Tensor], torch.Tensor, Path]:
-    """Train one all-timestep prior from an explicitly supplied immutable bank.
+    r"""Train and persist the noise-prediction CNN of the diffusion prior.
 
-    Defaults describe the provisional full-effort recipe; this function does
-    not select hyperparameters, generate propagation channels or evaluate a
-    benchmark. Calling it is an explicit training operation.
+    One model serves all diffusion timesteps and SNRs. The supplied training-data
+    asset provides fixed clean channel realizations; the diffusion timesteps and
+    noise of every epoch are drawn from deterministic seeded streams. Training
+    stops early when the validation loss no longer improves, the state with the
+    lowest validation loss is restored, and the completed asset is persisted
+    atomically and strictly reloaded before being returned.
+
+    .. rubric:: Deviations from the Paper
+
+    - The released recipe trains on 100,000 training and 10,000 validation
+      channel matrices for up to 500 epochs. This implementation uses the
+      benchmark's deterministic bank of complete system-channel realizations,
+      by default 6,400 for training and 256 for validation, each contributing
+      one receive-array vector per active pilot resource element, together with a
+      maximum epoch count and validation-loss early stopping.
+    - The paper's unit-average-power convention is implemented by dividing the
+      clean channels by the square root of the training-population channel power
+      recorded in the dataset asset.
+
+    :param resource_grid: Resource grid defining the pilot geometry of the dataset.
+    :param cfg: System and channel configuration defining the receive-array
+        shape, numerical precision, and device.
+    :param training_data_manifest: Manifest of the fixed training-data asset.
+    :param asset_root: Writable external root beneath which the model payload and
+        manifest are stored.
+    :param artifact_id: Identifier of the generated model asset.
+    :param epochs: Maximum number of complete training epochs.
+    :param optimizer_batch_size: Number of receive-array examples in each
+        optimizer update.
+    :param learning_rate: Adam learning rate.
+    :param patience_epochs: Stop after this many epochs without the required
+        validation-loss improvement. Zero disables early stopping.
+    :param relative_min_delta: Minimum relative validation-loss reduction counted
+        as an improvement.
+    :param initialization_seed: Seed of the model initialization.
+    :param noise_seed: Base seed of the per-epoch diffusion timesteps, noise, and
+        example order.
+    :param validation_noise_seed: Seed of the fixed validation timesteps and
+        noise.
+    :param overwrite: If `True`, replace an existing asset with the same identity.
+        If `False`, raise an error when that asset already exists.
+    :param training_device: Torch device used for training. If `None`, the
+        device of ``cfg`` is used.
+    :param checkpoint_dir: External directory for complete-epoch checkpoints and
+        progress records. If `None`, no checkpoints are written.
+    :param resume: If `True`, continue training from the latest checkpoint in
+        ``checkpoint_dir``.
+
+    :returns: The trained model state, the training-population channel power as
+        a tensor, and the path to the strictly validated ``manifest.json``.
     """
     selected_device = str(torch.device(training_device or cfg.device))
     if selected_device.startswith("mps"):

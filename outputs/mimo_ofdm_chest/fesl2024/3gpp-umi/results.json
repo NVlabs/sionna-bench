@@ -1,0 +1,27 @@
+{
+  "results_schema_version": 1,
+  "scenario_id": "3gpp-umi",
+  "config_fingerprint": "4f774132bba964e4d31fe64a10374b020db5abd5c13a5e564b4e62bf258a4efc",
+  "results": {
+    "DiffusionChannelEstimator": {
+      "file": "DiffusionChannelEstimator.npz",
+      "estimator_class": "sionna.bench.mimo_ofdm_chest.papers.fesl2024.estimator.DiffusionChannelEstimator",
+      "constructor_arguments": {
+        "err_var_scale": 0.0358,
+        "interpolation_type": "lin_time_avg",
+        "receive_array_shape": [
+          4,
+          4
+        ]
+      },
+      "assets": [
+        {
+          "asset_type": "diffusion-prior",
+          "artifact_id": "canonical",
+          "manifest_sha256": "b18282e8bfdb466ab248cb134459f46dd29976d7a2892175ed1f28efb3c2fbbd"
+        }
+      ],
+      "updated_at": "2026-11-11 08:00:23"
+    }
+  }
+}

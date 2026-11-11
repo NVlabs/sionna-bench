@@ -90,6 +90,12 @@ const SOURCE_INFO = {
     short: "Lyu 2026",
     reference: `L. Lyu, M. Ferreira Da Costa, and U. Mitra, "Atomic Hybrid Sparse/Diffuse Channel Estimation and Cramer-Rao Bounds Analysis," arXiv:2605.01825v1, 2026`,
   },
+  fesl2024: {
+    order: 11,
+    title: "Diffusion Model",
+    short: "Fesl 2024",
+    reference: `B. Fesl, M. Baur, F. Strasser, M. Joham, and W. Utschick, "Diffusion-Based Generative Prior for Low-Complexity MIMO Channel Estimation," IEEE Wireless Communications Letters, 2024`
+  }
 };
 
 const SELECTION_PRESETS = [
@@ -333,6 +339,7 @@ function selectionPresetRunIds(presetId, scenario) {
           "li2020",
           "baur2022",
           "balevi2020",
+          "fesl2024",
         ].includes(source);
       }
       return false;

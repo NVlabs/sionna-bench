@@ -147,8 +147,8 @@ omissions, source caveats and honest performance limits. Current selected
 model/calibration and contribution readiness are governed by the final audit,
 not by historical pre-coding restrictions.
 
-Full pre-consolidation reports remain hash-verified in
-`/Users/bene/projects/channel-estimation/fesl2024-finalization-v1/paper_after_cleanup/`
-against the sibling `final_hashes.json` manifest. No experiment was repeated.
+Full pre-consolidation reports remain hash-verified in the authors' external
+`fesl2024-finalization-v1/paper_after_cleanup/` archive against the sibling
+`final_hashes.json` manifest. No experiment was repeated.
 
 **Verdict: plan accepted for the approved adaptation; no new approval gate.**

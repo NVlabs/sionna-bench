@@ -52,6 +52,7 @@ may change BER and BLER but must leave `h_hat` and NMSE unchanged.
 | `InterpolatedDNNChannelEstimator` | Sionna LS-linear full-grid variance, unchanged by the DNN except for `err_var_scale`. | `err_var_scale=0.341` | **Scalar Calibration.** | The ten-trial 10 dB BLER study selected raw `0.0055752934`, rounded to `0.00558`. Paired canonical-size validation scored the rounded candidate at BLER `0.0208333333` and the rounded incumbent `0.341` at `0.0201719577`, so the incumbent was retained. |
 | `ReEsNetChannelEstimator` | Sionna LS pilot variance, bilinearly resized to the full grid independently of the learned channel reconstruction. | `err_var_scale=0.234` | **Scalar Calibration.** | The ten-trial 10 dB BLER study proposed rounded `0.224`. The candidate and rounded incumbent `0.234` tied at paired BLER `0.03042328`, so the strict-improvement rule retained the incumbent. |
 | `VAEChannelEstimator` | Marginal posterior covariance from the VAE decoder covariance and LS observation noise, transformed back to the antenna domain. | `err_var_scale=0.541` | **Scalar Calibration.** | The ten-trial 10 dB study proposed raw `0.4540521216`, rounded to `0.454`. The candidate and rounded incumbent `0.541` tied at paired BLER `0.0211640212`, so the strict-improvement rule retained the incumbent. |
+| `DiffusionChannelEstimator` | Sionna LS pilot variance `no/abs(pilot)^2` at the active pilots, multiplied by `err_var_scale` and propagated by the configured interpolator; the diffusion model supplies no posterior variance. | `err_var_scale=0.0358` | **Scalar Calibration.** | The maintainers' ten-trial 10 dB BLER study on the regenerated canonical model selected raw `0.0358103722`, the first of four trials tied at 82 of 3,024 block errors on an objective that was flat between `0.00102` and `0.623`. Paired canonical-size validation scored rounded `0.0358` at BLER `0.0264550265` and the authors' incumbent `0.623`, calibrated on their own undistributed fit, at `0.0267857143`, so `0.0358` was selected by the strict-improvement rule. |
 
 ## Calibration Sets
 
@@ -64,8 +65,10 @@ The estimators requiring a scalar calibration study are:
 - Balevi `DeepPriorChannelEstimator`;
 - both Melgar estimators;
 - Li `ReEsNetChannelEstimator`;
-- the selected Baur VAE method.
+- the selected Baur VAE method;
+- the contributed Fesl `DiffusionChannelEstimator`.
 
 Every selected canonical method with a current inference asset has completed
 calibration using the pre-release Sionna source that subsequently shipped in
-Sionna 2.1.
+Sionna 2.1, except the contributed Fesl diffusion estimator, which was
+calibrated with the Sionna 2.1.0 release.

@@ -49,6 +49,7 @@ regions.
 | Melgar et al., 2022 | All three variants for Models 2 and 3 with temporary checkpoints. | Model 2 requires equal-length frequency groups. Model 3 requires a compatible LS-interpolation layout and `block_len` dividing the effective-subcarrier count. Checkpoints are exact-geometry assets. | Architecture, state selection, fixed-data reuse, best-checkpoint restoration, temporary training, malformed checkpoints, ordered manifest linkage, and mixed/per-SNR compiled inference. | 27 tests, 8.35 s |
 | Li et al., 2020 | All three variants; temporary training covers `baseline` and `alternate`. | Active pilots must form rectangular grids, and full-grid dimensions must be integer multiples of pilot-grid dimensions. | Architecture, residual and long skips, super-resolution dimensions, pilot layout, link independence, temporary training, malformed checkpoints, and mixed/per-SNR compiled inference. | 23 tests, 8.92 s |
 | Baur et al., 2022 | All three variants for noisy and real training paths with temporary checkpoints. | Pilot positions must form compatible receive-array vectors. Checkpoint method, architecture, pilot geometry, and receive dimension must match exactly. | Encoder/decoder parameterization, ELBO expressions, covariance properties, transform round trips, reproducible temporary training, malformed checkpoints, and mixed/per-SNR compiled inference. | 72 tests, 11.52 s |
+| Fesl et al., 2024 | No variant coverage; only the canonical 4×4 configuration has been exercised, by the smoke and canonical runs. | Active pilots must form receive-array vectors with isotropic noise within each vector. The model is bound to an exact geometry, antenna ordering, angular transform, and pilot layout, and `receive_array_shape` must match the BS array. | None in this repository. The contributed implementation ships without tests; the authors' external suite is not imported. | none |
 
 ## Preparation And Inference Boundaries
 
@@ -67,6 +68,7 @@ regions.
 | Melgar et al., 2022, Model 3 | `asset.py` loads or trains DNN states; the estimator receives prepared states and builds the denoisers. | LS interpolation followed by block-DNN inference. | One mixed-SNR state is Tier A. The canonical per-SNR bank is Tier B at the prepared-state selection boundary. |
 | Li et al., 2020 | `asset.py` loads or trains ReEsNet states; the estimator receives prepared states and optional per-SNR noise variances. | LS extraction, selected ReEsNet inference, and full-grid assembly. | One mixed-SNR state is Tier A. The canonical per-SNR bank is Tier B at the prepared-state selection boundary. |
 | Baur et al., 2022 | `asset.py` loads or trains VAE states; the estimator receives prepared states and optional per-SNR noise variances. | Batched pilot-group encoder/decoder inference, VAE-LMMSE posterior estimation, and Sionna interpolation. | One mixed-SNR state is Tier A. The canonical per-SNR bank is Tier B at the prepared-state selection boundary. |
+| Fesl et al., 2024 | `asset.py` generates the clean channel bank and trains the diffusion prior; the estimator receives the prepared state, the frozen training channel power, and `receive_array_shape`, and performs no file lookup. | LS pilot estimation, physical antenna reordering and unitary 2D FFT, SNR-matched deterministic reverse diffusion through the shared CNN, inverse transform, and configured Sionna interpolation. | Tier B. Runtime matched-timestep bucketing stays outside the compiled region; the authors report eager and `torch.compile(backend="eager")` agreement. |
 
 No estimator performs persistent file I/O from `call()` or
 `estimate_at_pilot_locations()`. No pretrained estimator generates a dataset,
@@ -115,6 +117,9 @@ The focused commands cover:
 
 Other persistence, package, benchmark-infrastructure, and leaderboard tests
 under `test/mimo_ofdm_chest/infrastructure/` are outside these per-estimator counts.
+The contributed Fesl 2024 estimator has no directory under
+`test/mimo_ofdm_chest/papers/` and is excluded from these counts; its
+registration is covered by the package-API test only.
 
 On 2026-09-09, the complete repository suite was also run in a clean CPU-only
 environment installed from PyPI with Sionna 2.1.0 and Sionna RT 2.1.0. All

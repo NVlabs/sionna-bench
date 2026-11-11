@@ -109,32 +109,89 @@ class _DiffusionSchedule(torch.nn.Module):
 
 
 class DiffusionChannelEstimator(BasePilotChannelEstimator, _PilotGroupMixin):
-    r"""Denoise receive-array pilot observations using the original iterative DM.
+    r"""Channel estimator that leverages a diffusion model (DM) as a learned channel prior.
 
-    Implements Fesl et al., "Diffusion-Based Generative Prior for Low-Complexity
-    MIMO Channel Estimation," IEEE WCL, 2024 (arXiv:2403.03545, Algorithm 1).
-    A physical rectangular receive array replaces the paper's receive/transmit
-    matrix. Each active pilot RE and user is processed separately; Sionna
-    interpolates the denoised pilots. No model loading or training occurs here.
+    This implementation follows the method proposed in:
 
-    The matched transition is included, following Algorithm 1. The released
-    `wcl-2024` code omits that transition by using `reversed(range(k))`.
-    Error variances are an empirical scaled-LS fallback, not DM posteriors.
+    .. container:: bibliography-box
 
-    :param resource_grid: Sionna grid with an active orthogonal pilot pattern.
-    :param model_state: Prepared CNN state; named real float tensors, strictly
-        matching the fixed 55,025-parameter architecture.
-    :param channel_power: Positive real scalar training-population complex-entry
-        power in original channel units; never estimated from received pilots.
-    :param receive_array_shape: Physical (rows, columns), single polarization,
-        with Sionna antenna index ``row + rows*column``.
-    :param interpolation_type: Explicit Sionna policy, default ``lin_time_avg``.
-    :param interpolator: Optional custom interpolator, taking precedence.
-    :param err_var_scale: Empirical multiplier on original-unit LS variance.
-        Default 0.623 was selected by independent detector-BLER validation
-        for the frozen epoch-170 UMi model; it is not a posterior covariance.
-    :param precision: Sionna computation precision, including the CNN.
-    :param device: Sionna computation device.
+        .. bibliography::
+            :filter: key == "fesl2024diffusion"
+            :list: bullet
+
+    .. rubric:: TL;DR
+
+    This estimator uses a denoising diffusion model as a generative prior for the
+    angular-domain receive-array channel. A single noise-conditional CNN is
+    trained on clean channels and serves all diffusion timesteps and observation
+    SNRs. At inference, the least-squares (LS) pilot estimate is normalized by its
+    actual noise variance, matched to the step of the diffusion schedule with the
+    closest SNR, and refined by deterministic reverse conditional-mean steps
+    (Algorithm 1 of the paper). The result approximates the MMSE estimate under
+    the learned prior. A Sionna interpolator reconstructs the remaining resource
+    grid.
+
+    .. rubric:: Supported System Geometry
+
+    The estimator processes every active pilot resource element of every user
+    independently, while jointly processing the corresponding receive-array
+    vector. It therefore supports different resource-grid sizes, pilot layouts,
+    UE counts, and OFDM-symbol counts, provided that the following hold:
+
+    - The resource grid contains at least one active nonzero pilot.
+    - The receive array is a single-polarized rectangular array whose
+      ``receive_array_shape`` matches ``num_rx_ant`` in Sionna's antenna order.
+    - The noise variance is identical across the receive antennas of each pilot
+      resource element.
+    - The prepared model state and ``channel_power`` were trained for the same
+      receive-array shape and channel distribution.
+
+    Changing the receive-array shape or the channel model requires a separately
+    trained compatible model state.
+
+    .. rubric:: Deviations from the Paper
+
+    - The paper denoises a 64 x 16 receive/transmit MIMO channel matrix whose two
+      axes are transformed by a receive and a transmit DFT. This implementation
+      denoises the physical receive array at one pilot resource element; the two
+      axes are the rows and columns of the rectangular array, transformed by a
+      unitary 2D DFT. Users and pilot subcarriers are not stacked into a
+      transmit-array axis.
+    - The paper assumes unitary pilot decorrelation that yields the observation
+      ``y = h + n``. This implementation uses the LS estimate at sparse OFDM
+      pilots together with its actual noise variance ``no / |pilot|**2``.
+    - The paper's unit-average-power convention is implemented by normalizing
+      with the frozen training-population channel power ``channel_power``. No
+      per-observation or test-channel normalization is applied.
+    - Algorithm 1 of the paper applies the reverse step at the matched timestep
+      and at all smaller timesteps. The authors' released code skips the matched
+      timestep. This implementation follows the paper.
+    - The paper does not address interpolation. This implementation has to be
+      combined with a Sionna interpolator and defaults to ``lin_time_avg``.
+    - The paper does not specify detector-facing error variances. This
+      implementation returns the LS pilot error variance scaled by
+      ``err_var_scale``, which is an empirical calibration and not a posterior
+      variance of the diffusion model.
+
+    :param resource_grid: Sionna resource grid defining the pilot pattern.
+    :param model_state: Prepared state dictionary of the noise-prediction CNN.
+        It must match the fixed architecture with 55,025 parameters.
+    :param channel_power: Mean squared magnitude of the complex channel entries
+        of the training population, a positive real scalar. It is never
+        estimated from received pilots.
+    :param receive_array_shape: Physical ``(rows, columns)`` of the
+        single-polarized receive array. Sionna's antenna index is
+        ``row + rows * column``.
+    :param interpolation_type: Sionna interpolation policy. This argument is
+        ignored when ``interpolator`` is provided.
+    :param interpolator: Custom Sionna channel interpolator. If `None`, the
+        interpolator selected by ``interpolation_type`` is used.
+    :param err_var_scale: Multiplicative scale applied to the LS pilot error
+        variance that forms the detector-facing error variance.
+    :param precision: Precision used for Sionna channel estimation. If `None`,
+        :attr:`~sionna.phy.config.Config.precision` is used.
+    :param device: Device for Sionna channel estimation. If `None`,
+        :attr:`~sionna.phy.config.Config.device` is used.
     """
 
     def __init__(
@@ -146,7 +203,7 @@ class DiffusionChannelEstimator(BasePilotChannelEstimator, _PilotGroupMixin):
         interpolation_type: str = "lin_time_avg",
         interpolator: Optional[BaseChannelInterpolator] = None,
         *,
-        err_var_scale: float = 0.623,
+        err_var_scale: float = 0.0358,
         precision: Optional[Precision] = None,
         device: Optional[str] = None,
     ) -> None:

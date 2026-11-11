@@ -1,0 +1,24 @@
+{
+  "context_version": 1,
+  "study": "variance",
+  "completed_trial_target": 10,
+  "config_fingerprint": "4f774132bba964e4d31fe64a10374b020db5abd5c13a5e564b4e62bf258a4efc",
+  "source_files_sha256": {
+    "estimator.py": "9897444c566e6cd2197c23b2ce1c0aad582a13b3e4d01d24c54be02b6cc8efe3",
+    "asset.py": "3f8bd6cb866c4318d0f9385fc773d26f4bcf56c43309106aa767e8ffea12479b",
+    "tuning.py": "782b35a70cae5554d9d707d64a046a24b61aa99374fb38d616c8228c80837804",
+    "run_benchmark.py": "15faed4e2e3825f25f578cf70230d8a29039c57679f95571abc4c1f2a8952066"
+  },
+  "dependencies": {
+    "python": "3.12.3",
+    "torch": "2.11.0+cu126",
+    "numpy": "2.4.4",
+    "sionna": "2.1.0",
+    "optuna": "4.9.0",
+    "scipy": "1.17.1"
+  },
+  "inputs": {
+    "model_manifest": "/home/gmarti/sionna-bench-assets/3gpp-umi/fesl2024/diffusion-prior/canonical/manifest.json",
+    "model_manifest_sha256": "b18282e8bfdb466ab248cb134459f46dd29976d7a2892175ed1f28efb3c2fbbd"
+  }
+}
