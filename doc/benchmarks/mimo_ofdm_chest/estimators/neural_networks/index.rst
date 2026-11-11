@@ -11,5 +11,6 @@ Neural Network-Based Channel Estimators
 
    ~li2020.ReEsNetChannelEstimator
    ~balevi2020.DeepPriorChannelEstimator
+   ~fesl2024.DiffusionChannelEstimator
    ~melgar2022.DNNChannelEstimator
    ~melgar2022.InterpolatedDNNChannelEstimator

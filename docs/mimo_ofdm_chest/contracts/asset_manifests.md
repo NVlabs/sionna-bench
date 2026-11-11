@@ -219,6 +219,7 @@ state-dict structure, and semantic assumptions before returning tensors.
 | `reesnet` | `reesnet_params.npz`; `metadata` contains ordered state keys and history. Compatibility records pilot-grid, full-grid, and architecture dimensions. |
 | `vae-noisy` | `vae_params.npz`; `metadata` contains ordered state keys and history. Compatibility records the clean-label VAE method, receive-vector geometry, architecture, covariance parameterization, and exact pilot groups. |
 | `vae-real` | Same payload structure as `vae-noisy`, with compatibility identifying the noisy-label method and likelihood convention. |
+| `diffusion-prior` | `diffusion_params.npz` containing float32 `state_<index>` arrays in state-key order, the float64 training `channel_power`, and the float64 `betas` schedule; `metadata` contains ordered state keys and history. Compatibility records the CNN architecture, schedule length and checksum, antenna ordering, angular transform, normalization and timestep conventions, receive-array shape, and exact pilot groups. The recipe records the dataset manifest checksum and the `purpose`. |
 
 Payload layouts not accepted by the current paper-specific loaders are not
 part of this contract.

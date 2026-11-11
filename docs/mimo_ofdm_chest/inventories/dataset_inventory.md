@@ -13,13 +13,17 @@ generators reset the same training and validation seeds for every SNR-specific
 checkpoint. Consequently, the clean channel realizations are reused across
 SNRs while the applied noise level changes. Bank totals count channel/SNR
 exposures; they are neither additional examples available to one model nor
-additional unique propagation-channel realizations.
+additional unique propagation-channel realizations. The contributed Fesl 2024
+diffusion prior is the exception: one noise-conditional model is trained on
+the clean bank with diffusion noise redrawn every epoch, so its dataset is the
+bank itself rather than a per-SNR count.
 
 The inventory reflects the final calibrated-Sionna regeneration completed on
 2026-08-24 using pre-release source commit
 `f16208347246d8d17ec69628dfb856b19287b80c`. That checkout reported version
 2.0.1 and contains the channel-model changes subsequently released in Sionna
-2.1. Manifest `generation_recipe` and `metadata.history` fields remain
+2.1. The Fesl 2024 bank was generated on 2026-11-10 with the Sionna 2.1.0
+release. Manifest `generation_recipe` and `metadata.history` fields remain
 authoritative for an individual asset.
 
 ## Asset Dataset Inventory
@@ -34,6 +38,7 @@ authoritative for an individual asset.
 | `InterpolatedDNNChannelEstimator` (Melgar Model 3) | Canonical per-SNR bank. | Each independently trained SNR model uses **6,400** training and **256** validation channels. The same clean-channel draws are reused at all SNRs. The eleven-model bank records **70,400** training and **2,816** validation channel/SNR exposures, but still only 6,400 and 256 distinct clean draws. | The generator caps every eight-channel batch at 4,096 real frequency-block examples. Per model: **3,276,800** training and **131,072** validation examples; eleven-model bank: **36,044,800** and **1,441,792** example/SNR exposures. |
 | `ReEsNetChannelEstimator` | Canonical per-SNR bank. | Each independently trained SNR model uses **6,400** training and **256** validation channels. The eleven-model bank records **70,400** training and **2,816** validation channel/SNR exposures from the same clean draws. | Each channel contributes 64 independently processed UE/receive-antenna grids. Per model: **409,600** training and **16,384** validation grids; eleven-model bank: **4,505,600** and **180,224** grid/SNR exposures. |
 | `VAEChannelEstimator` (`VAE-noisy`) | Canonical per-SNR bank. | Each independently trained SNR model uses **6,400** training and **256** validation channels. The eleven-model bank records **70,400** training and **2,816** validation channel/SNR exposures from the same clean draws. | Each channel contributes 1,248 receive-array pilot observations. Per model: **7,987,200** training and **319,488** validation examples; eleven-model bank: **87,859,200** and **3,514,368** example/SNR exposures. |
+| `DiffusionChannelEstimator` | Canonical single shared model. | **6,400** training and **256** validation complete four-UE system-channel realizations, seeds 24250000/24260000, shared by all SNRs. | Each channel contributes 1,248 receive-array pilot observations: **7,987,200** training and **319,488** validation complex 16-element vectors. Diffusion noise is redrawn each epoch from seed 24280000; validation noise is fixed from seed 24290000. |
 
 ## Evidence About Dataset Adequacy
 
@@ -69,7 +74,10 @@ training and evaluation channels.
 Final canonical neural-model banks contain 11 SNR-specific checkpoints from
 -10 dB through 15 dB. Training Optuna objectives use the five points
 `{-10,-5,0,5,10}` dB; after selecting and independently validating a recipe,
-all eleven canonical checkpoints are generated with that same recipe.
+all eleven canonical checkpoints are generated with that same recipe. The
+contributed Fesl diffusion prior is one shared checkpoint whose recipe was
+author-selected, as described in the tuning protocol; no maintainer study
+appears in the table above for it.
 
 ## Methods Without A Persistent Dataset
 

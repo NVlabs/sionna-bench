@@ -1,0 +1,71 @@
+{
+  "config_schema_version": 4,
+  "scenario_id": "3gpp-umi",
+  "system": {
+    "ofdm": {
+      "subcarrier_spacing": 15000.0,
+      "num_prb": 52,
+      "num_ofdm_symbols": 14,
+      "cyclic_prefix_length": 44
+    },
+    "pilot_pattern": {
+      "type": "kronecker",
+      "ofdm_symbol_indices": [
+        2,
+        11
+      ]
+    },
+    "multi_user": {
+      "num_ue": 4,
+      "num_streams_per_tx": 1,
+      "direction": "uplink"
+    },
+    "arrays": {
+      "ue": {
+        "polarization": "single",
+        "polarization_type": "V",
+        "antenna_pattern": "omni"
+      },
+      "bs": {
+        "num_rows": 4,
+        "num_cols": 4,
+        "polarization": "single",
+        "polarization_type": "V",
+        "antenna_pattern": "38.901"
+      }
+    },
+    "mcs": {
+      "num_bits_per_symbol": 4,
+      "coderate": 0.6,
+      "max_k_per_cb": 8448
+    }
+  },
+  "channel_source": {
+    "type": "umi",
+    "parameters": {
+      "carrier_frequency": 2600000000.0,
+      "o2i_model": "low",
+      "enable_pathloss": false,
+      "enable_shadow_fading": false,
+      "ue_speed": 0.8333333333333333,
+      "spec_version": "19.2"
+    }
+  },
+  "evaluation": {
+    "snr_db_start": -10.0,
+    "snr_db_stop": 15.0,
+    "snr_db_step": 2.5,
+    "batch_size": 4,
+    "num_mc_batches": 63,
+    "setup_seed": 42,
+    "evaluation_seed": 2026
+  },
+  "numeric": {
+    "precision": "single"
+  },
+  "runtime": {
+    "device": "cuda:0",
+    "output_dir": "outputs/mimo_ofdm_chest"
+  },
+  "config_fingerprint": "4f774132bba964e4d31fe64a10374b020db5abd5c13a5e564b4e62bf258a4efc"
+}

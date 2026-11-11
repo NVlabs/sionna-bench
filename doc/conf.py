@@ -106,6 +106,7 @@ autosummary_context = {
     },
     "nn_asset_api_classes": {
         "sionna.bench.mimo_ofdm_chest.papers.baur2022.VAEChannelEstimator",
+        "sionna.bench.mimo_ofdm_chest.papers.fesl2024.DiffusionChannelEstimator",
         "sionna.bench.mimo_ofdm_chest.papers.melgar2022.DNNChannelEstimator",
         "sionna.bench.mimo_ofdm_chest.papers.melgar2022.InterpolatedDNNChannelEstimator",
         "sionna.bench.mimo_ofdm_chest.papers.li2020.ReEsNetChannelEstimator",
@@ -127,6 +128,10 @@ autosummary_context = {
             "generate_training_data",
             "train_model",
         ),
+        "sionna.bench.mimo_ofdm_chest.papers.fesl2024.DiffusionChannelEstimator": (
+            "generate_training_data",
+            "train_model",
+        ),
         "sionna.bench.mimo_ofdm_chest.papers.li2020.ReEsNetChannelEstimator": (
             "generate_training_data",
             "train_model",
@@ -143,6 +148,7 @@ autosummary_context = {
     "tuning_api_classes": {
         "sionna.bench.mimo_ofdm_chest.papers.edfors1996.TruncatedChannelEstimator",
         "sionna.bench.mimo_ofdm_chest.papers.baur2022.VAEChannelEstimator",
+        "sionna.bench.mimo_ofdm_chest.papers.fesl2024.DiffusionChannelEstimator",
         "sionna.bench.mimo_ofdm_chest.papers.koller2022.SpatialGMMChannelEstimator",
         "sionna.bench.mimo_ofdm_chest.papers.koller2022.SpectralGMMChannelEstimator",
         "sionna.bench.mimo_ofdm_chest.papers.li2020.ReEsNetChannelEstimator",

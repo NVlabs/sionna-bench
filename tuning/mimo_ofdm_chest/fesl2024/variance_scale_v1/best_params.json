@@ -1,0 +1,292 @@
+{
+  "batch_elements_per_snr": 252,
+  "batch_elements_per_trial": 252,
+  "batch_size_per_snr": 4,
+  "best_estimator_kwargs": {
+    "channel_power": {
+      "device": "cpu",
+      "dtype": "torch.float64",
+      "shape": [],
+      "type": "torch.Tensor"
+    },
+    "err_var_scale": 0.03581037222144431,
+    "model_state": {
+      "post.0.bias": {
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "shape": [
+          43
+        ],
+        "type": "torch.Tensor"
+      },
+      "post.0.weight": {
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "shape": [
+          43,
+          64,
+          3,
+          3
+        ],
+        "type": "torch.Tensor"
+      },
+      "post.2.bias": {
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "shape": [
+          22
+        ],
+        "type": "torch.Tensor"
+      },
+      "post.2.weight": {
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "shape": [
+          22,
+          43,
+          3,
+          3
+        ],
+        "type": "torch.Tensor"
+      },
+      "post.4.bias": {
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "shape": [
+          2
+        ],
+        "type": "torch.Tensor"
+      },
+      "post.4.weight": {
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "shape": [
+          2,
+          22,
+          3,
+          3
+        ],
+        "type": "torch.Tensor"
+      },
+      "pre.0.bias": {
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "shape": [
+          32
+        ],
+        "type": "torch.Tensor"
+      },
+      "pre.0.weight": {
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "shape": [
+          32,
+          2,
+          3,
+          3
+        ],
+        "type": "torch.Tensor"
+      },
+      "pre.2.bias": {
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "shape": [
+          64
+        ],
+        "type": "torch.Tensor"
+      },
+      "pre.2.weight": {
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "shape": [
+          64,
+          32,
+          3,
+          3
+        ],
+        "type": "torch.Tensor"
+      },
+      "time_affine.bias": {
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "shape": [
+          128
+        ],
+        "type": "torch.Tensor"
+      },
+      "time_affine.weight": {
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "shape": [
+          128,
+          16
+        ],
+        "type": "torch.Tensor"
+      }
+    },
+    "receive_array_shape": [
+      4,
+      4
+    ]
+  },
+  "best_estimator_kwargs_variants": [
+    {
+      "channel_power": {
+        "device": "cpu",
+        "dtype": "torch.float64",
+        "shape": [],
+        "type": "torch.Tensor"
+      },
+      "err_var_scale": 0.03581037222144431,
+      "model_state": {
+        "post.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            43
+          ],
+          "type": "torch.Tensor"
+        },
+        "post.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            43,
+            64,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "post.2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            22
+          ],
+          "type": "torch.Tensor"
+        },
+        "post.2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            22,
+            43,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "post.4.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            2
+          ],
+          "type": "torch.Tensor"
+        },
+        "post.4.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            2,
+            22,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "pre.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32
+          ],
+          "type": "torch.Tensor"
+        },
+        "pre.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            32,
+            2,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "pre.2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64
+          ],
+          "type": "torch.Tensor"
+        },
+        "pre.2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            64,
+            32,
+            3,
+            3
+          ],
+          "type": "torch.Tensor"
+        },
+        "time_affine.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128
+          ],
+          "type": "torch.Tensor"
+        },
+        "time_affine.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "shape": [
+            128,
+            16
+          ],
+          "type": "torch.Tensor"
+        }
+      },
+      "receive_array_shape": [
+        4,
+        4
+      ]
+    }
+  ],
+  "best_params": {
+    "err_var_scale": 0.03581037222144431
+  },
+  "best_value": 0.027116402116402115,
+  "best_variant_objective_values": [
+    0.027116402116402115
+  ],
+  "config_fingerprint": "4f774132bba964e4d31fe64a10374b020db5abd5c13a5e564b4e62bf258a4efc",
+  "config_name": "umi_3gpp",
+  "detector_metric": "bler",
+  "ebno_db": 10.0,
+  "ebno_dbs": [
+    10.0
+  ],
+  "estimator_class": "DiffusionChannelEstimator",
+  "metric": "weighted_detector",
+  "n_trials": 10,
+  "num_estimator_variants": 1,
+  "num_mc_batches_per_snr": 63,
+  "num_mc_batches_per_trial": 63,
+  "optimization_elapsed_seconds": 11.509176589548588,
+  "probe_seed": 24330000,
+  "requested_n_trials": 10,
+  "sampler_seed": 24350000,
+  "scenario_id": "3gpp-umi",
+  "snr_points_per_trial": 1,
+  "snr_weights": [
+    1.0
+  ],
+  "storage": "sqlite:////home/gmarti/sionna-bench-tuning/fesl2024/study.db",
+  "study_name": "fesl2024-variance"
+}

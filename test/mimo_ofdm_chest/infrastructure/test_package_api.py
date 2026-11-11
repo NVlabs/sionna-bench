@@ -10,6 +10,7 @@ import sionna.bench
 _ESTIMATOR_MODULES = {
     "DeepPriorChannelEstimator": "sionna.bench.mimo_ofdm_chest.papers.balevi2020",
     "DNNChannelEstimator": "sionna.bench.mimo_ofdm_chest.papers.melgar2022",
+    "DiffusionChannelEstimator": "sionna.bench.mimo_ofdm_chest.papers.fesl2024",
     "InterpolatedDNNChannelEstimator": "sionna.bench.mimo_ofdm_chest.papers.melgar2022",
     "LSCombEstimator": "sionna.bench.mimo_ofdm_chest.papers.coleri2002",
     "ReEsNetChannelEstimator": "sionna.bench.mimo_ofdm_chest.papers.li2020",
